@@ -50,8 +50,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
          print(bundlePath!) ;
-        outletImage.image = NSImage(contentsOfFile: bundlePath!+"/home/cshome/s/skumari/346/test.png")
-
+        outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
 
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
 
@@ -69,7 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         
-        let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/test.mov");
+        let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.mov");
         playView = AVPlayer(url: fileURL as URL);
         outletVideo.player = playView ;
         print("video")
