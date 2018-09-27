@@ -22,7 +22,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var outletVideo: AVPlayerView!
     @IBOutlet weak var outletscroll: NSScrollView!
     @IBOutlet weak var aboutWindow: NSView!
-
+    
+    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var tableContent: NSScrollView!
     @IBOutlet weak var aboutWindowText: NSTextField!
     
     @IBOutlet weak var searchTab: NSSearchField!
@@ -50,7 +52,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         
          print(bundlePath!) ;
-        outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
+        
+        outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/MediaLibraryManager/test.json")
 
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251D25B0215C88F2006AE126 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D25AF215C88F2006AE126 /* Document.swift */; };
 		46A552E92146020C00DDE8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A552E82146020C00DDE8FD /* AppDelegate.swift */; };
 		46A552EB2146020F00DDE8FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A552EA2146020F00DDE8FD /* Assets.xcassets */; };
 		46A552EE2146020F00DDE8FD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46A552EC2146020F00DDE8FD /* MainMenu.xib */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		251D25AF215C88F2006AE126 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		46A552E52146020C00DDE8FD /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A552E82146020C00DDE8FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46A552EA2146020F00DDE8FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				46A552E82146020C00DDE8FD /* AppDelegate.swift */,
 				46A552EA2146020F00DDE8FD /* Assets.xcassets */,
 				46A552EC2146020F00DDE8FD /* MainMenu.xib */,
+				251D25AF215C88F2006AE126 /* Document.swift */,
 				46A552EF2146020F00DDE8FD /* Info.plist */,
 				46A552F02146020F00DDE8FD /* Assignment2.entitlements */,
 			);
@@ -178,6 +181,7 @@
 				46E2657A214F708900AFB900 /* commands.swift in Sources */,
 				46E26577214F708900AFB900 /* Collection.swift in Sources */,
 				46E2657D214F708900AFB900 /* IO.swift in Sources */,
+				251D25B0215C88F2006AE126 /* Document.swift in Sources */,
 				46E2657C214F708900AFB900 /* File.swift in Sources */,
 				46E26578214F708900AFB900 /* Index.swift in Sources */,
 				46E2657F214F708900AFB900 /* cli.swift in Sources */,
