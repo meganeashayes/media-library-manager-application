@@ -21,11 +21,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var outletImage: NSImageView!
     @IBOutlet weak var outletVideo: AVPlayerView!
     @IBOutlet weak var outletscroll: NSScrollView!
-    @IBOutlet weak var aboutWindow: NSView!
+   @IBOutlet weak var aboutWindow: NSView!
+    @IBOutlet weak var aboutWindowText: NSTextField!
     
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var tableContent: NSScrollView!
-    @IBOutlet weak var aboutWindowText: NSTextField!
+   
     
     @IBOutlet weak var searchTab: NSSearchField!
     @IBOutlet weak var searchForward: NSButton!

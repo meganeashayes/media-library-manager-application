@@ -10,7 +10,7 @@ import Cocoa
 
 class Document: NSDocument {
     
-    var Documentfiles = NSMutableArray()
+    var mediaFiles = NSMutableArray()
 
     /*
     override var windowNibName: String? {
@@ -48,6 +48,12 @@ class Document: NSDocument {
 
     
     override func makeWindowControllers() {
+        // Returns the Storyboard that contains your Document window.
+        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+        let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Document Window Controller")) as! NSWindowController
+        self.addWindowController(windowController)
+        let ourViewController = windowController.contentViewController
+        ourViewController?.representedObject = self
         
     }
 }
