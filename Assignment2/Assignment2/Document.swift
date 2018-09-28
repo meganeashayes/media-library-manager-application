@@ -11,6 +11,7 @@ import Cocoa
 class Document: NSDocument {
     
     var mediaFiles = NSMutableArray()
+    
 
     /*
     override var windowNibName: String? {

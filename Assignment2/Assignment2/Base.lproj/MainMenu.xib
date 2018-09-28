@@ -26,8 +26,6 @@
         </arrayController>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Assignment2" customModuleProvider="target">
             <connections>
-                <outlet property="aboutWindow" destination="YM9-BI-RBg" id="ljO-XB-0RT"/>
-                <outlet property="aboutWindowText" destination="nuU-UR-aZL" id="TQT-SR-Xql"/>
                 <outlet property="fitButton" destination="lBB-aL-jum" id="69B-g8-ibi"/>
                 <outlet property="lastPageButton" destination="A2b-jp-Dhi" id="0H6-Ap-Ts9"/>
                 <outlet property="nextPageButton" destination="0JB-97-2oh" id="OpM-ng-2pH"/>
@@ -56,7 +54,7 @@
                             <menuItem title="About Assignment2" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="openAboutWindow:" target="Voe-Tx-rLC" id="zwJ-I8-rhT"/>
+                                    <action selector="openAboutWindow:" target="Voe-Tx-rLC" id="Sxz-wj-8Qd"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
@@ -711,7 +709,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1009,7 +1007,7 @@
                             </subviews>
                         </clipView>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="46Q-fn-77U">
-                            <rect key="frame" x="1" y="84" width="161" height="15"/>
+                            <rect key="frame" x="1" y="8" width="0.0" height="15"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="99J-Do-cMV">
@@ -1083,45 +1081,6 @@
             </scroller>
             <point key="canvasLocation" x="529" y="-1"/>
         </scrollView>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="uQw-yC-gay">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="207" width="517" height="263"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
-            <view key="contentView" id="YM9-BI-RBg">
-                <rect key="frame" x="0.0" y="0.0" width="517" height="263"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nuU-UR-aZL">
-                        <rect key="frame" x="18" y="20" width="420" height="210"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="210" id="Ivv-zR-kvC"/>
-                            <constraint firstAttribute="width" constant="416" id="RDg-Kb-9M1"/>
-                        </constraints>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" state="on" alignment="center" id="OTb-Zx-eUI">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygd-Ai-rv3">
-                        <rect key="frame" x="174" y="234" width="148" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" title="Media Manager Library" drawsBackground="YES" id="LFJ-H0-2yu">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                </subviews>
-                <constraints>
-                    <constraint firstAttribute="bottom" secondItem="nuU-UR-aZL" secondAttribute="bottom" id="00u-al-8Qk"/>
-                    <constraint firstAttribute="trailing" secondItem="nuU-UR-aZL" secondAttribute="trailing" constant="51" id="bY7-or-aOA"/>
-                    <constraint firstItem="nuU-UR-aZL" firstAttribute="leading" secondItem="YM9-BI-RBg" secondAttribute="leading" constant="50" id="qgZ-UR-2ib"/>
-                </constraints>
-            </view>
-            <point key="canvasLocation" x="1013.5" y="-154.5"/>
-        </window>
         <userDefaultsController representsSharedInstance="YES" id="85K-BN-hXd"/>
     </objects>
     <resources>

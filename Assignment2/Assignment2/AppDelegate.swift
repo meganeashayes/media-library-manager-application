@@ -21,9 +21,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var outletImage: NSImageView!
     @IBOutlet weak var outletVideo: AVPlayerView!
     @IBOutlet weak var outletscroll: NSScrollView!
-   @IBOutlet weak var aboutWindow: NSView!
-    @IBOutlet weak var aboutWindowText: NSTextField!
-    
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var tableContent: NSScrollView!
    
@@ -37,6 +34,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var lastPageButton: NSButton!
     @IBOutlet weak var nextPageButton: NSButton!
     
+    let timerWindow = aboutPageController();
+    
+    
     @IBAction func play(_ sender: NSButtonCell) {
         print("playing") ;
 //        soundPlayer.play();
@@ -48,6 +48,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         // print("test");
+      
+        //openAboutWindow(self)
         
         let bundlePath = Bundle.main.resourcePath
         
@@ -87,12 +89,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         outletscroll.isHidden=false;
         outletVideo.isHidden=false;
         outletImage.isHidden = false;
-        
-        // about window regarding app
-        let aboutSize: NSSize = CGSize(width: 200, height: 250)
-        aboutWindow.window?.setIsVisible(false)
-        aboutWindow.setFrameSize(aboutSize)
-        aboutWindowText.stringValue = "This is application to manage media collection.\n Developed by Sweta Kumari and Megan Hayes created for the University of Otago, COSC-346 Assignment2."
 
     }
     
@@ -100,10 +96,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
    
-    
+
+    // To open About page window when clicking about aboutPage tab
     @IBAction func openAboutWindow(_ sender: Any) {
-    aboutWindow.window?.setIsVisible(true)
-    aboutWindow.window?.setTitleWithRepresentedFilename("About")
+        timerWindow.window?.setIsVisible(true)
     }
     
     

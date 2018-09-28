@@ -22,6 +22,8 @@
 		46E2657D214F708900AFB900 /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E26572214F708800AFB900 /* IO.swift */; };
 		46E2657E214F708900AFB900 /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E26573214F708800AFB900 /* protocols.swift */; };
 		46E2657F214F708900AFB900 /* cli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E26574214F708800AFB900 /* cli.swift */; };
+		46E46132215DB01D00301345 /* aboutPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E46130215DB01D00301345 /* aboutPageController.swift */; };
+		46E46133215DB01D00301345 /* aboutPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E46131215DB01D00301345 /* aboutPageController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		46E26572214F708800AFB900 /* IO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
 		46E26573214F708800AFB900 /* protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 		46E26574214F708800AFB900 /* cli.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cli.swift; sourceTree = "<group>"; };
+		46E46130215DB01D00301345 /* aboutPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutPageController.swift; sourceTree = "<group>"; };
+		46E46131215DB01D00301345 /* aboutPageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = aboutPageController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				46A552E82146020C00DDE8FD /* AppDelegate.swift */,
+				46E46130215DB01D00301345 /* aboutPageController.swift */,
+				46E46131215DB01D00301345 /* aboutPageController.xib */,
 				46A552EA2146020F00DDE8FD /* Assets.xcassets */,
 				46A552EC2146020F00DDE8FD /* MainMenu.xib */,
 				251D25B1215C94C4006AE126 /* ViewControlller.swift */,
@@ -167,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E46133215DB01D00301345 /* aboutPageController.xib in Resources */,
 				46A552EB2146020F00DDE8FD /* Assets.xcassets in Resources */,
 				46E2657B214F708900AFB900 /* test.json in Resources */,
 				46A552EE2146020F00DDE8FD /* MainMenu.xib in Resources */,
@@ -189,6 +196,7 @@
 				46E2657C214F708900AFB900 /* File.swift in Sources */,
 				46E26578214F708900AFB900 /* Index.swift in Sources */,
 				46E2657F214F708900AFB900 /* cli.swift in Sources */,
+				46E46132215DB01D00301345 /* aboutPageController.swift in Sources */,
 				46E26579214F708900AFB900 /* Validate.swift in Sources */,
 				46E26576214F708900AFB900 /* Metadata.swift in Sources */,
 				46E2657E214F708900AFB900 /* protocols.swift in Sources */,
