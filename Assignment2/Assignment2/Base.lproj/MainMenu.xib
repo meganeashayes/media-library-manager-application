@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.AVKitIBPlugin" version="14113"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <plugIn identifier="com.apple.imagekit.ibplugin" version="14113"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +31,7 @@
                 <outlet property="fitButton" destination="lBB-aL-jum" id="69B-g8-ibi"/>
                 <outlet property="lastPageButton" destination="A2b-jp-Dhi" id="0H6-Ap-Ts9"/>
                 <outlet property="nextPageButton" destination="0JB-97-2oh" id="OpM-ng-2pH"/>
-                <outlet property="outletImage" destination="hIY-Wj-PuE" id="hl4-tr-1fy"/>
+                <outlet property="outletImage" destination="Tp2-Pv-Dvg" id="0fM-SJ-tT3"/>
                 <outlet property="outletTextView" destination="IiX-va-40c" id="8c3-wT-hTV"/>
                 <outlet property="outletVideo" destination="5n5-mO-huv" id="zP9-7X-aXd"/>
                 <outlet property="outletscroll" destination="D6J-kf-dS6" id="wjp-av-qDF"/>
@@ -55,7 +56,7 @@
                             <menuItem title="About Assignment2" id="5kV-Vb-QxS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="openAboutWindow:" target="Voe-Tx-rLC" id="Sxz-wj-8Qd"/>
+                                    <action selector="zoomOut:" target="Voe-Tx-rLC" id="Sxz-wj-8Qd"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
@@ -715,6 +716,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
+                    <ikImageView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tp2-Pv-Dvg">
+                        <rect key="frame" x="70" y="141" width="300" height="169"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50002289" green="0.50002289" blue="0.50002289" alpha="1" colorSpace="deviceRGB"/>
+                    </ikImageView>
                     <box fixedFrame="YES" boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="dOg-zI-o5U">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="360"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -731,6 +737,9 @@
                                         <string key="keyEquivalent">-</string>
                                         <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="zoomOut:" target="Voe-Tx-rLC" id="mLB-sq-VT8"/>
+                                    </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBB-aL-jum">
                                     <rect key="frame" x="85" y="279" width="57" height="40"/>
@@ -750,7 +759,7 @@
                                         <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="zoomIn:" target="Voe-Tx-rLC" id="AuV-Ae-mUx"/>
+                                        <action selector="zoomIn:" target="Voe-Tx-rLC" id="ZDJ-yZ-ch0"/>
                                     </connections>
                                 </button>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DR2-XC-ptp">
@@ -887,7 +896,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="play:" target="Voe-Tx-rLC" id="ZD2-IF-OmG"/>
+                            <action selector="zoomOut:" target="Voe-Tx-rLC" id="ZD2-IF-OmG"/>
                         </connections>
                     </button>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6J-kf-dS6">
@@ -1120,8 +1129,8 @@
                                     <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3c-RQ-EAh">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="269"/>
                                         <clipView key="contentView" id="v1E-8E-Ze2">
-                                            <rect key="frame" x="1" y="23" width="331" height="245"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <rect key="frame" x="1" y="0.0" width="331" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Pw6-Qw-eZu" viewBased="YES" id="aXk-Lx-ogd">
                                                     <rect key="frame" x="0.0" y="0.0" width="331" height="245"/>

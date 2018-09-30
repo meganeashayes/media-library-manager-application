@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		251D25B0215C88F2006AE126 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D25AF215C88F2006AE126 /* Document.swift */; };
 		251D25B2215C94C4006AE126 /* ViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D25B1215C94C4006AE126 /* ViewControlller.swift */; };
+		25F4B0EC21616ECD000066F1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F4B0EA21616E75000066F1 /* QuartzCore.framework */; };
+		25F4B0ED21616ECD000066F1 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F4B0EB21616ECD000066F1 /* Quartz.framework */; };
 		46A552E92146020C00DDE8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A552E82146020C00DDE8FD /* AppDelegate.swift */; };
 		46A552EB2146020F00DDE8FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46A552EA2146020F00DDE8FD /* Assets.xcassets */; };
 		46A552EE2146020F00DDE8FD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46A552EC2146020F00DDE8FD /* MainMenu.xib */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		251D25AF215C88F2006AE126 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		251D25B1215C94C4006AE126 /* ViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControlller.swift; sourceTree = "<group>"; };
+		25F4B0EA21616E75000066F1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		25F4B0EB21616ECD000066F1 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quartz.framework; sourceTree = "<group>"; };
 		46A552E52146020C00DDE8FD /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A552E82146020C00DDE8FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46A552EA2146020F00DDE8FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25F4B0EC21616ECD000066F1 /* QuartzCore.framework in Frameworks */,
+				25F4B0ED21616ECD000066F1 /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +75,8 @@
 		46A552DC2146020C00DDE8FD = {
 			isa = PBXGroup;
 			children = (
+				25F4B0EB21616ECD000066F1 /* Quartz.framework */,
+				25F4B0EA21616E75000066F1 /* QuartzCore.framework */,
 				46A552E72146020C00DDE8FD /* Assignment2 */,
 				46A552E62146020C00DDE8FD /* Products */,
 				46E2656A214F708800AFB900 /* MediaLibraryManager */,
@@ -348,6 +356,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Assignment2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,6 +377,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Assignment2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

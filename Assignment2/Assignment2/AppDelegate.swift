@@ -9,6 +9,7 @@
 import Cocoa
 import AVKit
 import AVFoundation
+import Quartz
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -19,12 +20,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var last = MMResultSet()
     @IBOutlet var outletTextView: NSTextView!
     @IBOutlet weak var outletImage: NSImageView!
+    //@IBOutlet weak var outletImage: IKImageView!
     @IBOutlet weak var outletVideo: AVPlayerView!
     @IBOutlet weak var outletscroll: NSScrollView!
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var tableContent: NSScrollView!
-   
-    
     @IBOutlet weak var searchTab: NSSearchField!
     @IBOutlet weak var searchForward: NSButton!
     @IBOutlet weak var searchBackward: NSButton!
@@ -34,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var lastPageButton: NSButton!
     @IBOutlet weak var nextPageButton: NSButton!
     
-    let timerWindow = aboutPageController();
+    let aboutWindow = aboutPageController();
     
     
     @IBAction func play(_ sender: NSButtonCell) {
@@ -56,8 +56,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
          print(bundlePath!) ;
         
-        outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/MediaLibraryManager/test.json")
-
+        outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
+        //outletImage.image() = IKImageView(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
 
             do {
@@ -99,14 +99,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // To open About page window when clicking about aboutPage tab
     @IBAction func openAboutWindow(_ sender: Any) {
-        timerWindow.window?.setIsVisible(true)
+        aboutWindow.window?.setIsVisible(true)
     }
     
     
+    @IBAction func zoomOut(_ sender: NSButton) {
+         outletImage.scaleUnitSquare(to: NSSize(width: 0.4, height: 0.4))
+    }
+    
+
     @IBAction func zoomIn(_ sender: NSButton) {
-        //library.zoomIn(sender)
+//        var t = CGAffineTransform.identity
+//        t = t.translatedBy(x: -100, y: -300)
+//        t = t.scaledBy(x: 2, y: 2)
+//
+//        outletImage.layer?.setAffineTransform(t)
+//        outletImage.layer?.setAffineTransform(CGAffineTransform.identity)
+        
+        let size:NSSize = outletImage.bounds.size
+        
+        let newSize: NSSize = NSMakeSize(size.width * 1.0, size.height * 1.0);
+        
+        outletImage.setBoundsSize(newSize);
     }
-    
-    
     
 }
