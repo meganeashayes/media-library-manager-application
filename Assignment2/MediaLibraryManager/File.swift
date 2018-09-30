@@ -71,7 +71,7 @@ extension MMFile {
 
 /// The object at the root of the File type hierarchy. All file types
 /// should extend this one.
-class File: MMFile {
+class File: MMFile{
 
     /// The list of metadata associated with the file
     var metadata: [MMMetadata]

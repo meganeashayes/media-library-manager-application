@@ -118,7 +118,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let size:NSSize = outletImage.bounds.size
         
-        let newSize: NSSize = NSMakeSize(size.width * 1.0, size.height * 1.0);
+        let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9);
         
         outletImage.setBoundsSize(newSize);
     }

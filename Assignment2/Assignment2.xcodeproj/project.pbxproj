@@ -78,8 +78,8 @@
 				25F4B0EB21616ECD000066F1 /* Quartz.framework */,
 				25F4B0EA21616E75000066F1 /* QuartzCore.framework */,
 				46A552E72146020C00DDE8FD /* Assignment2 */,
-				46A552E62146020C00DDE8FD /* Products */,
 				46E2656A214F708800AFB900 /* MediaLibraryManager */,
+				46A552E62146020C00DDE8FD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
