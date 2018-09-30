@@ -26,6 +26,7 @@
 		46E46133215DB01D00301345 /* aboutPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E46131215DB01D00301345 /* aboutPageController.xib */; };
 		84F38C3E2160B0B900EDF5F4 /* SplitWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F38C3D2160B0B900EDF5F4 /* SplitWindowViewController.swift */; };
 		84F38C402160BA8300EDF5F4 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F38C3F2160BA8300EDF5F4 /* SplitViewController.swift */; };
+		84F38C422160C19500EDF5F4 /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F38C412160C19500EDF5F4 /* ImageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		46E46131215DB01D00301345 /* aboutPageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = aboutPageController.xib; sourceTree = "<group>"; };
 		84F38C3D2160B0B900EDF5F4 /* SplitWindowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitWindowViewController.swift; sourceTree = "<group>"; };
 		84F38C3F2160BA8300EDF5F4 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		84F38C412160C19500EDF5F4 /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				84F38C3D2160B0B900EDF5F4 /* SplitWindowViewController.swift */,
 				46A552EA2146020F00DDE8FD /* Assets.xcassets */,
 				46A552EC2146020F00DDE8FD /* MainMenu.xib */,
+				84F38C412160C19500EDF5F4 /* ImageController.swift */,
 				251D25B1215C94C4006AE126 /* ViewControlller.swift */,
 				251D25AF215C88F2006AE126 /* Document.swift */,
 				46A552EF2146020F00DDE8FD /* Info.plist */,
@@ -200,6 +203,7 @@
 				251D25B2215C94C4006AE126 /* ViewControlller.swift in Sources */,
 				84F38C402160BA8300EDF5F4 /* SplitViewController.swift in Sources */,
 				46E2657D214F708900AFB900 /* IO.swift in Sources */,
+				84F38C422160C19500EDF5F4 /* ImageController.swift in Sources */,
 				251D25B0215C88F2006AE126 /* Document.swift in Sources */,
 				46E2657C214F708900AFB900 /* File.swift in Sources */,
 				46E26578214F708900AFB900 /* Index.swift in Sources */,
