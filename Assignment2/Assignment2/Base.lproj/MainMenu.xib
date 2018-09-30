@@ -709,7 +709,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1082,6 +1082,91 @@
             <point key="canvasLocation" x="529" y="-1"/>
         </scrollView>
         <userDefaultsController representsSharedInstance="YES" id="85K-BN-hXd"/>
+        <window title="Search" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="n74-D3-Q2S">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="283" y="305" width="496" height="269"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" id="RO0-IL-ZEh">
+                <rect key="frame" x="0.0" y="0.0" width="496" height="269"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="49U-qM-MNk">
+                        <rect key="frame" x="0.0" y="0.0" width="496" height="269"/>
+                        <subviews>
+                            <customView fixedFrame="YES" id="gn9-7J-qiT">
+                                <rect key="frame" x="0.0" y="0.0" width="153" height="269"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tap-HG-ybo">
+                                        <rect key="frame" x="20" y="227" width="113" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="6H3-bK-baE">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <action selector="searchBar:" target="-1" id="91u-N8-Xp1"/>
+                                            </connections>
+                                        </searchFieldCell>
+                                    </searchField>
+                                </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" id="e07-DI-7LV">
+                                <rect key="frame" x="163" y="0.0" width="333" height="269"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </customView>
+                        </subviews>
+                        <holdingPriorities>
+                            <real value="250"/>
+                            <real value="250"/>
+                        </holdingPriorities>
+                    </splitView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="49U-qM-MNk" firstAttribute="top" secondItem="RO0-IL-ZEh" secondAttribute="top" id="CTm-gz-hB0"/>
+                    <constraint firstItem="49U-qM-MNk" firstAttribute="leading" secondItem="RO0-IL-ZEh" secondAttribute="leading" id="K5b-nw-wzX"/>
+                    <constraint firstAttribute="trailing" secondItem="49U-qM-MNk" secondAttribute="trailing" id="Ufu-qs-BsE"/>
+                    <constraint firstAttribute="bottom" secondItem="49U-qM-MNk" secondAttribute="bottom" id="mf3-KI-UNQ"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="458" y="-503.5"/>
+        </window>
+        <window title="Display Image" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="dvA-fT-hRZ">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="283" y="305" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" id="XrM-yw-HMz">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpd-BU-k8y">
+                        <rect key="frame" x="457" y="247" width="6" height="6"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="groove" id="bxy-xt-o3R"/>
+                    </imageView>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Km-rj-cDZ">
+                        <rect key="frame" x="20" y="70" width="180" height="180"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="180" id="5Ri-a9-8lh"/>
+                            <constraint firstAttribute="width" constant="180" id="lDD-8r-NfN"/>
+                        </constraints>
+                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Notes on this image" drawsBackground="YES" id="K4a-Rd-mW6">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="bpd-BU-k8y" secondAttribute="trailing" constant="20" id="8FW-Gq-qUg"/>
+                    <constraint firstItem="5Km-rj-cDZ" firstAttribute="leading" secondItem="XrM-yw-HMz" secondAttribute="leading" constant="20" id="DcV-rU-2oE"/>
+                    <constraint firstItem="5Km-rj-cDZ" firstAttribute="top" secondItem="XrM-yw-HMz" secondAttribute="top" constant="20" id="Hk5-rB-50C"/>
+                    <constraint firstItem="bpd-BU-k8y" firstAttribute="top" secondItem="XrM-yw-HMz" secondAttribute="top" constant="20" id="uEC-hx-bxu"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="460" y="-865"/>
+        </window>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
