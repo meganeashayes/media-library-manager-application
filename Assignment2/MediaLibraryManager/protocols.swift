@@ -26,7 +26,7 @@ import Foundation
 /// In this protocol we define three properties and that it must confrom to the
 /// CustomStringConvertable protocol (i.e. it also needs to have a description
 /// property).
-protocol MMFile: CustomStringConvertible {
+protocol MMFile:  CustomStringConvertible {
     var metadata: [MMMetadata] {get set}
     var filename: String {get set}
     var path: String {get set}
