@@ -53,16 +53,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let bundlePath = Bundle.main.resourcePath
         
-        
-         print(bundlePath!) ;
-        
+         print("hello")
+         print(bundlePath!)
+
         outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
-        //outletImage.image() = IKImageView(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
+        
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
+            //print(filepath)
 
             do {
                 let contents = try String(contentsOfFile: filepath)
-                // print(contents)
+                print(contents)
                 outletTextView.string = contents;
                 outletTextView.isEditable = false ;
 
@@ -72,12 +73,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             print ("else");
         }
+       
         
-        
-        let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.mov");
-        playView = AVPlayer(url: fileURL as URL);
-        outletVideo.player = playView ;
-        print("video")
+//        let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.mov");
+//        playView = AVPlayer(url: fileURL as URL);
+//        outletVideo.player = playView ;
+//        print("video")
         
 //        do {
 //            soundPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "m4a")!))
@@ -86,9 +87,31 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        } catch {
 //        }
         
+        //To get metadata of audio file
+        let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.m4a");
+        let asset = AVAsset(url: fileURL as URL);
+        //asset.player = playView ;
+        print("audio")
+        let formatsKey = "availableMetadataFormats"
+        
+       asset.loadValuesAsynchronously(forKeys: [formatsKey]) {
+            var error: NSError? = nil
+            let status = asset.statusOfValue(forKey: formatsKey, error: &error)
+            if status == .loaded {
+                for format in asset.availableMetadataFormats {
+                    let metadata = asset.metadata(forFormat: format)
+                    // process format-specific metadata collection
+                    print(metadata)
+                    
+                }
+            }
+        }
+        
         outletscroll.isHidden=false;
         outletVideo.isHidden=false;
         outletImage.isHidden = false;
+        
+        
 
     }
     
