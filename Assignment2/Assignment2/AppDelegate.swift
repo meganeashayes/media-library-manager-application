@@ -146,4 +146,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         outletImage.setBoundsSize(newSize);
     }
     
+    
+    @IBAction func openDocument(_ sender: AnyObject) {
+        let panel = NSOpenPanel()
+        panel.allowedFileTypes = NSImage.imageTypes
+        panel.beginSheetModal(for: outletImage.window!,
+                              completionHandler: { (returnCode)-> Void in
+                                if returnCode == NSApplication.ModalResponse.OK {
+                                    let image = NSImage(byReferencing: panel.url!)
+                                    print("Image test: \(image)");
+                        
+                                    self.outletImage.image = image
+                                    self.outletImage.needsDisplay = true
+                                } } )
+    }
+    
+    //want to add an IBAction connected to import --> action associated with an OpenPanel
+    //lab 10 -->
+    // opens a file
+    // hat file will have many files --> associated with MediaFiles array
+    
 }

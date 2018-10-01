@@ -937,6 +937,17 @@
                                         <action selector="add:" target="vBT-DF-dmy" id="r3m-z0-Yst"/>
                                     </connections>
                                 </button>
+                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S60-wl-3XW">
+                                    <rect key="frame" x="7" y="161" width="81" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zvJ-fY-2je">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="openDocument:" target="Voe-Tx-rLC" id="oll-Zy-WtR"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <backgroundFilters>
                                 <ciFilter name="CIGaussianBlur">
