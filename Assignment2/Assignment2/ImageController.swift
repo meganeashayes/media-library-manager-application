@@ -10,6 +10,8 @@ import Cocoa
 
 class ImageController: NSWindowController {
     
+    @IBAction func displayImage(_ sender: NSImageCell) {
+    }
     @IBOutlet weak var mediaNotes: NSTextField!
     override func windowDidLoad() {
         super.windowDidLoad()

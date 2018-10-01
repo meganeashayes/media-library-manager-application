@@ -102,6 +102,7 @@
 				46A552EC2146020F00DDE8FD /* MainMenu.xib */,
 				84F38C412160C19500EDF5F4 /* ImageController.swift */,
 				251D25B1215C94C4006AE126 /* ViewControlller.swift */,
+				84F38C3F2160BA8300EDF5F4 /* SplitViewController.swift */,
 				251D25AF215C88F2006AE126 /* Document.swift */,
 				46A552EF2146020F00DDE8FD /* Info.plist */,
 				46A552F02146020F00DDE8FD /* Assignment2.entitlements */,
@@ -114,7 +115,6 @@
 			children = (
 				46E2656B214F708800AFB900 /* Metadata.swift */,
 				46E2656C214F708800AFB900 /* Collection.swift */,
-				84F38C3F2160BA8300EDF5F4 /* SplitViewController.swift */,
 				46E2656D214F708800AFB900 /* Index.swift */,
 				46E2656E214F708800AFB900 /* Validate.swift */,
 				46E2656F214F708800AFB900 /* commands.swift */,
