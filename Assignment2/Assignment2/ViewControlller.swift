@@ -9,6 +9,9 @@
 import Cocoa
 
 class ViewControlller: NSViewController {
+    
+    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var tableContent: NSScrollView!
 
 
     override func viewDidLoad() {
