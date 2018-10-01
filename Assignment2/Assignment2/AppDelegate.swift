@@ -87,7 +87,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        } catch {
 //        }
         
-        //To get metadata of audio file
+        //To get metadata of audio filebf
         let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.m4a");
         let asset = AVAsset(url: fileURL as URL);
         //asset.player = playView ;

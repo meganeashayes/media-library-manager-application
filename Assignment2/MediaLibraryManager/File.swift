@@ -71,19 +71,28 @@ extension MMFile {
 
 /// The object at the root of the File type hierarchy. All file types
 /// should extend this one.
-class File: MMFile{
+class File: NSObject, MMFile{
+   
+    
 
-    /// The list of metadata associated with the file
-    var metadata: [MMMetadata]
+    override init() {
+       
+        metadata =  [MMMetadata]();
+        print("81 File Class import"); 
+         super.init()
+    }
+    
+     /// The list of metadata associated with the file
+     var metadata: [MMMetadata]
 
     /// The filename of the file. For example, in /path/to/foobar.ext, this is the foorbar.ext part
-    var filename: String
+    @objc dynamic var filename: String = ""
 
     /// The path of the file. For example, in /path/to/foobar.ext, this is the /path/to part
-    var path: String
+    @objc dynamic var path: String = ""
 
     /// A human-readable string representation of the file
-    var description: String {
+    override var description: String {
         return "\(self.filename)"
     }
 
