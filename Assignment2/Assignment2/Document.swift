@@ -10,7 +10,42 @@ import Cocoa
 
 class Document: NSDocument {
     
-    var mediaFiles = NSMutableArray()
+    @objc dynamic var mediaFiles = NSMutableArray()
+//        {
+//
+//        willSet {
+//            for file in mediaFiles {
+//                stopObservingPerson(file as! File)
+//            }
+//        }
+//        didSet {
+//            for file in mediaFiles {
+//                startObservingPerson(file as! File)
+//            }
+//        }
+//    }
+    
+    @objc func importMediaFiles() {
+        let importer = JSONImporter()
+        let bundlePath = Bundle.main.resourcePath
+        var files: [MMFile]
+        do {
+            files = try importer.read(filename: bundlePath!+"/test.json")
+            Swift.print(files[1].path)
+            var newArray: [String] = []
+            var i:Int = 0
+            for file in files {
+                newArray.append(file.path)
+                mediaFiles.insert(file, at: i)
+                i+=1
+            }
+            Swift.print(newArray)
+            
+            
+        } catch {
+            //print("Error found line 149", showPrintPanel: true)
+        }
+    }
     
 
     /*
@@ -45,6 +80,33 @@ class Document: NSDocument {
 
     class func autosavesInPlace() -> Bool {
         return true
+    }
+    
+    @objc func insertObject(_ p:File, inEmployeesAtIndex index:Int){
+        NSLog("adding %@ to %@",p,mediaFiles)
+        // add the inverse of the insertion action to the undo stack
+        if let undo = self.undoManager {
+            (undo.prepare(withInvocationTarget: self) as AnyObject).removeObjectFromEmployeesAtIndex(index)
+            if !undo.isUndoing {
+                undo.setActionName("Add Person")
+            }
+            // Add the person to the NSMutableArray
+            mediaFiles.insert(p, at: index)
+        }
+    }
+    
+    @objc func removeObjectFromEmployeesAtIndex(_ index:Int){
+        let p = mediaFiles.object(at: index) as! File
+        NSLog("removing %@ from %@",p,mediaFiles)
+        // add the inverse of the insertion action to the undo stack
+        if let undo = self.undoManager {
+            (undo.prepare(withInvocationTarget: self) as AnyObject).insertObject(p, inEmployeesAtIndex: index)
+            if !undo.isUndoing {
+                undo.setActionName("Remove Person")
+            }
+            // Remove the person from the NSMutableArray
+            mediaFiles.removeObject(at: index)
+        }
     }
 
     

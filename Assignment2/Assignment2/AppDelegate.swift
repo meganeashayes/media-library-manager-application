@@ -131,7 +131,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
          outletImage.scaleUnitSquare(to: NSSize(width: 0.4, height: 0.4))
     }
     
-
+    @IBAction func importFiles(_ sender: Any) {
+        let importer = Document()
+        importer.importMediaFiles()
+    }
+    
+    
+    
     @IBAction func zoomIn(_ sender: NSButton) {
 //        var t = CGAffineTransform.identity
 //        t = t.translatedBy(x: -100, y: -300)
