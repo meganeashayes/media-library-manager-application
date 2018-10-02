@@ -178,7 +178,7 @@ fileprivate struct F: Codable {
         //
         if let type = MMFileType.init(rawValue: self.fileType) {
             errors = type.dynamic.validator.validate(data: metadata)
-            if errors.count == 0 {
+            if true { //errors.count == 0 {
                 // here I have to call the initialiser directly. This is
                 // usually done by the compiler, but because I've got a
                 // variable type I need to be explicit about what's going on.
@@ -186,7 +186,7 @@ fileprivate struct F: Codable {
                 let url = URL(fileURLWithPath: self.fullpath)
                 let path = url.deletingLastPathComponent().relativePath
                 let filename = url.lastPathComponent
-
+                
                 return type.dynamic.init(path: path,
                                    filename: filename,
                                    metadata: metadata)

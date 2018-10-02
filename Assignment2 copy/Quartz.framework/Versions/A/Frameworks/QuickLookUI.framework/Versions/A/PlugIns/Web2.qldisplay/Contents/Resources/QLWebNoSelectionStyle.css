@@ -1,5 +1,0 @@
-* {-webkit-user-select: none ! important;}
-* {cursor: default ! important;}
-a:hover {cursor: pointer ! important;}
-a:hover * {cursor: pointer ! important;}
-img { image-rendering: optimizeQuality;}
