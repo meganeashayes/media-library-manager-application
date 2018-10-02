@@ -33,6 +33,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var fitButton: NSButton!
     @IBOutlet weak var lastPageButton: NSButton!
     @IBOutlet weak var nextPageButton: NSButton!
+    @IBOutlet weak var imageNotes: NSTextField!
+    @IBOutlet weak var imageInformation: NSTextField!
+    @IBOutlet weak var displayImage: NSImageView!
     
     let aboutWindow = aboutPageController();
     
@@ -57,7 +60,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
          print("hello")
          print(bundlePath!)
 
-        outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
+        //outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
+        outletImage.image = NSImage(contentsOfFile: bundlePath! + "/test.png")
         
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
             //print(filepath)
@@ -74,6 +78,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             print ("else");
         }
+        imageInformation.stringValue = "An Image"
        
         
 //        let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.mov");
@@ -89,7 +94,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        }
         
         //To get metadata of audio filebf
-        let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.m4a");
+        //let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.m4a");
+        let fileURL = NSURL(fileURLWithPath: bundlePath! + "/test.m4a");
         let asset = AVAsset(url: fileURL as URL);
         //asset.player = playView ;
         print("audio")
@@ -121,6 +127,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
    
 
+    
     // To open About page window when clicking about aboutPage tab
     @IBAction func openAboutWindow(_ sender: Any) {
         aboutWindow.window?.setIsVisible(true)

@@ -29,7 +29,7 @@ class SplitWindowViewController: NSWindowController {
         // about window regarding app
         aboutWindow.window?.setTitleWithRepresentedFilename("About")
         //let aboutSize: NSSize = CGSize(width: 400, height: 450)
-        //aboutWindow.window?.setIsVisible(true)
+        //aboutWindow.window?.setIsVisible(false)
         //aboutWindow.setFrameSize(aboutSize)
         aboutWindowText.stringValue = "This is application to manage media collection.\n Developed by Sweta Kumari and Megan Hayes created for the University of Otago, COSC-346 Assignment2."
     }
