@@ -38,7 +38,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var displayImage: NSImageView!
     
     let aboutWindow = aboutPageController();
-    
+    let imageWindow = ImageController();
     
     @IBAction func play(_ sender: NSButtonCell) {
         print("playing") ;
@@ -60,8 +60,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
          print("hello")
          print(bundlePath!)
 
-        //outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
-        outletImage.image = NSImage(contentsOfFile: bundlePath! + "/test.png")
+        outletImage.image = NSImage(contentsOfFile: "/home/cshome/m/mhayes/346/Assignment 2/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
+        //outletImage.image = NSImage(contentsOfFile: bundlePath! + "/test.png")
+        outletTextView.string = "An Image"
         
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
             //print(filepath)
@@ -78,7 +79,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             print ("else");
         }
-        imageInformation.stringValue = "An Image"
+        
        
         
 //        let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.mov");
@@ -132,6 +133,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func openAboutWindow(_ sender: Any) {
         aboutWindow.window?.setIsVisible(true)
     }
+    
+    
     
     
     @IBAction func zoomOut(_ sender: NSButton) {

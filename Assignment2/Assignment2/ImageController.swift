@@ -11,6 +11,12 @@ import Cocoa
 class ImageController: NSWindowController {
     
     @IBOutlet weak var mediaNotes: NSTextField!
+    
+    convenience init(){
+        self.init(windowNibName: NSNib.Name(rawValue: "imageController"));
+        
+    }
+    
     override func windowDidLoad() {
         super.windowDidLoad()
     
