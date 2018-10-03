@@ -8,7 +8,6 @@
 
 import Cocoa
 
-class Document: NSDocument {
     
     class Document: NSDocument {
         @objc dynamic private static var myContext = 0
@@ -66,6 +65,7 @@ class Document: NSDocument {
         override func windowControllerDidLoadNib(_ aController: NSWindowController) {
             super.windowControllerDidLoadNib(aController)
             // Add any code here that needs to be executed once the windowController has loaded the document's window.
+            
             let ourViewController = aController.contentViewController
             ourViewController?.representedObject = self
         }
@@ -124,5 +124,5 @@ class Document: NSDocument {
             ourViewController?.representedObject = self
             
         }
-}
+
 }

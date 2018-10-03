@@ -10,36 +10,37 @@ import Cocoa
 
 class ImportFiles: NSObject {
     
-    @objc dynamic var newArray: [String] = []
-    //@objc dynamic var newArray:String = "hello"
     @objc dynamic var path: Float = 0.05
     
-    @objc func importMediaFiles() -> [String]  {
+    
+    @objc func importMediaFiles(mediaFiles: NSMutableArray)  {
         let importer = JSONImporter()
         let bundlePath = Bundle.main.resourcePath
         var files: [MMFile]
         do {
             files = try importer.read(filename: bundlePath!+"/test.json")
+            Swift.print(files.count)
+            Swift.print(files[0].path)
             Swift.print(files[1].path)
-            //var newArray: [String] = []
-            //var i:Int = 0
+            var i: Int = 0
             for file in files {
-                newArray.append(file.path)
-                //mediaFiles.insert(file, at: i)
-                //i+=1
+                var newFile = File(path: file.path, filename: file.filename, metadata: file.metadata)
+                
+                mediaFiles.add(newFile)
+                print(mediaFiles[i])
+                i += 1
             }
-            Swift.print(newArray)
-
+            print("line33 from importFiles")
+            
 
         } catch {
-            //print("Error found line 149", showPrintPanel: true)
+            print("Error found line 149")
         }
-        return(newArray)
     }
     
     override func setNilValueForKey(_ key: String) {
         if key == "expectedRaise" {
-            path = 0.0
+            //path = 0.0
         }else{
             super.setNilValueForKey(key)
         }

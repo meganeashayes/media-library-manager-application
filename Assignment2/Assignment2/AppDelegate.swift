@@ -13,6 +13,9 @@ import Quartz
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    @objc dynamic var mediaFiles = NSMutableArray()
+    
     var playView = AVPlayer();
     var soundPlayer =  AVAudioPlayer();
     @IBOutlet weak var window: NSWindow!
@@ -141,9 +144,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
          outletImage.scaleUnitSquare(to: NSSize(width: 0.75, height: 0.75))
     }
     
-    @IBAction func importFiles(_ sender: Any) {
+    @IBAction func importFiles(_ sender: NSButton) {
+        print("Line 149 is working")
         let importer = ImportFiles()
-        importer.importMediaFiles()
+        importer.importMediaFiles(mediaFiles: mediaFiles)
     }
     
     
