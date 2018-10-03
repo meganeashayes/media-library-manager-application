@@ -63,8 +63,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
          print("hello")
          print(bundlePath!)
 
-        outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assigNew/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
+        //outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assigNew/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
         //outletImage.image = NSImage(contentsOfFile: bundlePath! + "/test.png")
+        outletImage.image = NSImage(contentsOfFile: mediaFiles[0] as! String)
+        print("\(mediaFiles[0])")
         outletTextView.string = "An Image"
         
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
@@ -148,9 +150,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         print("Line 149 is working")
         let importer = ImportFiles()
         importer.importMediaFiles(mediaFiles: mediaFiles)
+        print("\(mediaFiles[1])")
     }
     
-    
+    func tableView(_ tableView: NSTableView, didSelectRowAt indexPath: IndexPath) {
+        // self.view.backgroundColor = UIColor.blue
+        //let detail: NSImageView = self.outletImage
+        //outletImage.image = NSImage(named: mediaFiles[indexPath.item]["image"])
+        //detail.image =
+
+       // let detail:DetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+//        detail.strlbl1 = array1[indexPath.row]
+//        detail.strlbl2 = array2[indexPath.row]
+//        detail.strimg = arrimg[indexPath.row]
+//        self.navigationController?.pushViewController(detail, animated: true)
+    }
     
     @IBAction func zoomIn(_ sender: NSButton) {
 //        var t = CGAffineTransform.identity
@@ -166,5 +180,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         outletImage.setBoundsSize(newSize);
     }
+    
+    
     
 }
