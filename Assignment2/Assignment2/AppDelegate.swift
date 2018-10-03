@@ -60,7 +60,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
          print("hello")
          print(bundlePath!)
 
-        outletImage.image = NSImage(contentsOfFile: "/home/cshome/m/mhayes/346/Assignment 2/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
+        outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assigNew/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
         //outletImage.image = NSImage(contentsOfFile: bundlePath! + "/test.png")
         outletTextView.string = "An Image"
         
@@ -138,11 +138,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     
     @IBAction func zoomOut(_ sender: NSButton) {
-         outletImage.scaleUnitSquare(to: NSSize(width: 0.4, height: 0.4))
+         outletImage.scaleUnitSquare(to: NSSize(width: 0.75, height: 0.75))
     }
     
     @IBAction func importFiles(_ sender: Any) {
-        let importer = Document()
+        let importer = ImportFiles()
         importer.importMediaFiles()
     }
     

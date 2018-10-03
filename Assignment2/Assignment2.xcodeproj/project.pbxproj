@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		251D25B0215C88F2006AE126 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D25AF215C88F2006AE126 /* Document.swift */; };
 		251D25B2215C94C4006AE126 /* ViewControlller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D25B1215C94C4006AE126 /* ViewControlller.swift */; };
+		25C0C23321643FA900476B9A /* ImportFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0C23221643FA800476B9A /* ImportFiles.swift */; };
 		25F4B0EC21616ECD000066F1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F4B0EA21616E75000066F1 /* QuartzCore.framework */; };
 		25F4B0ED21616ECD000066F1 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F4B0EB21616ECD000066F1 /* Quartz.framework */; };
 		46A552E92146020C00DDE8FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A552E82146020C00DDE8FD /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		251D25AF215C88F2006AE126 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		251D25B1215C94C4006AE126 /* ViewControlller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControlller.swift; sourceTree = "<group>"; };
+		25C0C23221643FA800476B9A /* ImportFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportFiles.swift; sourceTree = "<group>"; };
 		25F4B0EA21616E75000066F1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
 		25F4B0EB21616ECD000066F1 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quartz.framework; sourceTree = "<group>"; };
 		46A552E52146020C00DDE8FD /* Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 				84F38C412160C19500EDF5F4 /* ImageController.swift */,
 				251D25B1215C94C4006AE126 /* ViewControlller.swift */,
 				251D25AF215C88F2006AE126 /* Document.swift */,
+				25C0C23221643FA800476B9A /* ImportFiles.swift */,
 				46A552EF2146020F00DDE8FD /* Info.plist */,
 				46A552F02146020F00DDE8FD /* Assignment2.entitlements */,
 			);
@@ -211,6 +214,7 @@
 				251D25B0215C88F2006AE126 /* Document.swift in Sources */,
 				46E2657C214F708900AFB900 /* File.swift in Sources */,
 				46E26578214F708900AFB900 /* Index.swift in Sources */,
+				25C0C23321643FA900476B9A /* ImportFiles.swift in Sources */,
 				46E2657F214F708900AFB900 /* cli.swift in Sources */,
 				46E46132215DB01D00301345 /* aboutPageController.swift in Sources */,
 				46E26579214F708900AFB900 /* Validate.swift in Sources */,
