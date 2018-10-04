@@ -897,10 +897,10 @@
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     </searchFieldCell>
                                     <connections>
-                                        <binding destination="vBT-DF-dmy" name="predicate" keyPath="filterPredicate" id="4uR-eY-PLN">
+                                        <binding destination="vBT-DF-dmy" name="predicate" keyPath="filterPredicate" id="Bjd-lp-rDd">
                                             <dictionary key="options">
                                                 <string key="NSDisplayName">predicate</string>
-                                                <string key="NSPredicateFormat">filename contains $value</string>
+                                                <string key="NSPredicateFormat">filename contains[c] $value</string>
                                             </dictionary>
                                         </binding>
                                     </connections>
