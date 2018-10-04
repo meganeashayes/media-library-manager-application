@@ -80,4 +80,27 @@ class DisplayController: NSWindowController {
         }
     }
     
+    /*
+    * Function to seach String in textield
+     */
+    func getString(title: String, question: String, defaultValue: String) -> String {
+        let msg = NSAlert()
+        msg.addButton(withTitle: "OK")      // 1st button
+        msg.addButton(withTitle: "Cancel")  // 2nd button
+        msg.messageText = title
+        msg.informativeText = question
+        
+        let txt = NSTextField(frame: NSRect(x: 0, y: 0, width: 200, height: 24))
+        txt.stringValue = defaultValue
+        
+        msg.accessoryView = txt
+        let response: NSApplication.ModalResponse = msg.runModal()
+        
+        if (response == NSApplication.ModalResponse.alertFirstButtonReturn) {
+            return txt.stringValue
+        } else {
+            return ""
+        }
+    }
+    
 }
