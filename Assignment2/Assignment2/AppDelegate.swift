@@ -16,14 +16,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
     @objc dynamic var mediaFiles = NSMutableArray()
     
-<<<<<<< HEAD
-    
-=======
+
     var isSearching = false
     var filterData = [String]()
     var playView = AVPlayer();
     var soundPlayer =  AVAudioPlayer();
->>>>>>> bbb9ac731edffbb78b3389429f5100d84610539b
+    
     @IBOutlet weak var window: NSWindow!
     var last = MMResultSet()
     @IBOutlet var outletTextView: NSTextView!
@@ -51,11 +49,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
     let aboutWindow = aboutPageController();
     let imageWindow = DisplayController();
-<<<<<<< HEAD
-    
-=======
+
     //searchBar.delegate = self
->>>>>>> bbb9ac731edffbb78b3389429f5100d84610539b
     
 //    @IBAction func play(_ sender: NSButtonCell) {
 //        print("playing") ;
