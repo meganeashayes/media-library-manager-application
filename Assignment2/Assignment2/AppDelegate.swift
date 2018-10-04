@@ -63,6 +63,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         outletVideo.isHidden = true
         outletImage.isHidden = true
         
+        let importer = ImportFiles()
+        importer.importMediaFiles(mediaFiles: mediaFiles)
+        
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
 
             do {
@@ -97,11 +100,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
          outletImage.scaleUnitSquare(to: NSSize(width: 0.75, height: 0.75))
     }
     
-    @IBAction func importFiles(_ sender: NSButton) {
-        print("Line 149 is working")
+    @IBAction func importFiles(_ sender: Any) {
         let importer = ImportFiles()
         importer.importMediaFiles(mediaFiles: mediaFiles)
-        print("\(mediaFiles[1])")
     }
     
     @IBAction func zoomIn(_ sender: NSButton) {
@@ -119,7 +120,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
 //        outletImage.setBoundsSize(newSize)
     }
     
-    
+    /// Enables media (image/video etc.) to be displayed in the application when the media name
+    /// is clicked in the table
+    ///
+    /// Uses regular expressions to identify the kind of media
     @IBAction func tableViewAction(_ sender: Any) {
         let index: Int = tableView.selectedRow
         if index > -1 {

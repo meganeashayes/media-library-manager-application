@@ -113,6 +113,12 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Import Files" id="XmW-MH-xOU">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="importFiles:" target="Voe-Tx-rLC" id="BcF-2B-jG6"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
                             <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                 <connections>
@@ -793,16 +799,6 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Qw-AH-kMz">
-                        <rect key="frame" x="2" y="1" width="80" height="32"/>
-                        <buttonCell key="cell" type="push" title="Import" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wu8-5g-ACb">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="importFiles:" target="Voe-Tx-rLC" id="VYe-UG-xQc"/>
-                        </connections>
-                    </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b7R-No-vDP">
                         <rect key="frame" x="83" y="1" width="93" height="32"/>
                         <buttonCell key="cell" type="push" title="Add files" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bwV-Vp-WmM">
@@ -1041,12 +1037,11 @@
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="b7R-No-vDP" firstAttribute="leading" secondItem="8Qw-AH-kMz" secondAttribute="trailing" constant="13" id="20G-co-Oxv"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="trailing" secondItem="Tp2-Pv-Dvg" secondAttribute="trailing" id="7Zi-K9-CEj"/>
                     <constraint firstItem="Tp2-Pv-Dvg" firstAttribute="leading" secondItem="klh-gl-Gjp" secondAttribute="trailing" constant="31" id="Edi-Tm-zhm"/>
                     <constraint firstItem="D6J-kf-dS6" firstAttribute="top" secondItem="5n5-mO-huv" secondAttribute="bottom" constant="6" id="Ewp-4a-xmt"/>
                     <constraint firstItem="ZF2-Fe-Sef" firstAttribute="top" secondItem="D6J-kf-dS6" secondAttribute="bottom" constant="8" symbolic="YES" id="GH1-Zz-xcC"/>
-                    <constraint firstItem="8Qw-AH-kMz" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="8" id="Glv-BV-BP5"/>
+                    <constraint firstAttribute="bottom" secondItem="b7R-No-vDP" secondAttribute="bottom" constant="8" id="H6s-ne-Xgj"/>
                     <constraint firstItem="Tp2-Pv-Dvg" firstAttribute="leading" secondItem="D6J-kf-dS6" secondAttribute="leading" id="ICR-OH-q0v"/>
                     <constraint firstAttribute="bottom" secondItem="SKY-4G-bmy" secondAttribute="bottom" id="Jca-o5-Q85"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="10" id="M13-PK-SQq"/>
@@ -1059,14 +1054,13 @@
                     <constraint firstItem="Tp2-Pv-Dvg" firstAttribute="top" secondItem="5n5-mO-huv" secondAttribute="top" id="YGl-2b-fnf"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="leading" secondItem="Tp2-Pv-Dvg" secondAttribute="leading" id="b7B-7S-BRG"/>
                     <constraint firstAttribute="trailing" secondItem="SKY-4G-bmy" secondAttribute="trailing" id="ckZ-xb-ydM"/>
+                    <constraint firstItem="b7R-No-vDP" firstAttribute="top" secondItem="klh-gl-Gjp" secondAttribute="bottom" constant="10" id="ezU-At-D5e"/>
                     <constraint firstItem="ZF2-Fe-Sef" firstAttribute="leading" secondItem="D6J-kf-dS6" secondAttribute="leading" id="fOs-Vy-6c3"/>
+                    <constraint firstItem="b7R-No-vDP" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="89" id="h22-3c-1ak"/>
                     <constraint firstItem="ZF2-Fe-Sef" firstAttribute="trailing" secondItem="D6J-kf-dS6" secondAttribute="trailing" id="i1o-lt-9CE"/>
-                    <constraint firstItem="8Qw-AH-kMz" firstAttribute="baseline" secondItem="b7R-No-vDP" secondAttribute="baseline" id="kdG-eZ-6GP"/>
                     <constraint firstItem="SKY-4G-bmy" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="nGR-Ql-8IE"/>
                     <constraint firstItem="klh-gl-Gjp" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="oFF-K9-CaS"/>
                     <constraint firstItem="hIY-Wj-PuE" firstAttribute="leading" secondItem="klh-gl-Gjp" secondAttribute="trailing" constant="66" id="of5-F2-weA"/>
-                    <constraint firstItem="8Qw-AH-kMz" firstAttribute="top" secondItem="klh-gl-Gjp" secondAttribute="bottom" constant="10" id="rKa-qr-ITJ"/>
-                    <constraint firstAttribute="bottom" secondItem="8Qw-AH-kMz" secondAttribute="bottom" constant="8" id="tvD-tg-e43"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="228" id="wjY-cu-BWU"/>
                     <constraint firstItem="SKY-4G-bmy" firstAttribute="leading" secondItem="Tp2-Pv-Dvg" secondAttribute="trailing" constant="47" id="yBC-Pt-RSM"/>
                 </constraints>
