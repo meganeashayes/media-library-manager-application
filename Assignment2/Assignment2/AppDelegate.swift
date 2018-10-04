@@ -41,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var displayImage: NSImageView!
     
     let aboutWindow = aboutPageController();
-    let imageWindow = ImageController();
+    let imageWindow = DisplayController();
     
     @IBAction func play(_ sender: NSButtonCell) {
         print("playing") ;
@@ -185,7 +185,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func tableViewAction(_ sender: Any) {
         let index: Int = tableView.selectedRow
         if index > -1 {
+            imageWindow.window?.setIsVisible(true)
             let file: File =  mediaFiles[index] as! File
+            
             let range = NSRange(location: 0, length: file.filename.utf16.count)
             let regexImage = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].png")
             let regexVideo = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].mov")

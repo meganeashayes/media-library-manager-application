@@ -27,6 +27,8 @@
 		46E2657F214F708900AFB900 /* cli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E26574214F708800AFB900 /* cli.swift */; };
 		46E46132215DB01D00301345 /* aboutPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E46130215DB01D00301345 /* aboutPageController.swift */; };
 		46E46133215DB01D00301345 /* aboutPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46E46131215DB01D00301345 /* aboutPageController.xib */; };
+		844982542165BE98002C3F33 /* DisplayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844982522165BE98002C3F33 /* DisplayController.swift */; };
+		844982552165BE98002C3F33 /* DisplayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844982532165BE98002C3F33 /* DisplayController.xib */; };
 		84F38C3E2160B0B900EDF5F4 /* SplitWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F38C3D2160B0B900EDF5F4 /* SplitWindowViewController.swift */; };
 		84F38C422160C19500EDF5F4 /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F38C412160C19500EDF5F4 /* ImageController.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +57,8 @@
 		46E26574214F708800AFB900 /* cli.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cli.swift; sourceTree = "<group>"; };
 		46E46130215DB01D00301345 /* aboutPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutPageController.swift; sourceTree = "<group>"; };
 		46E46131215DB01D00301345 /* aboutPageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = aboutPageController.xib; sourceTree = "<group>"; };
+		844982522165BE98002C3F33 /* DisplayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayController.swift; sourceTree = "<group>"; };
+		844982532165BE98002C3F33 /* DisplayController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayController.xib; sourceTree = "<group>"; };
 		84F38C3D2160B0B900EDF5F4 /* SplitWindowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitWindowViewController.swift; sourceTree = "<group>"; };
 		84F38C412160C19500EDF5F4 /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,8 @@
 				46A552E82146020C00DDE8FD /* AppDelegate.swift */,
 				46E46130215DB01D00301345 /* aboutPageController.swift */,
 				46E46131215DB01D00301345 /* aboutPageController.xib */,
+				844982522165BE98002C3F33 /* DisplayController.swift */,
+				844982532165BE98002C3F33 /* DisplayController.xib */,
 				84F38C3D2160B0B900EDF5F4 /* SplitWindowViewController.swift */,
 				46A552EA2146020F00DDE8FD /* Assets.xcassets */,
 				46A552EC2146020F00DDE8FD /* MainMenu.xib */,
@@ -194,6 +200,7 @@
 				46A552EB2146020F00DDE8FD /* Assets.xcassets in Resources */,
 				46E2657B214F708900AFB900 /* test.json in Resources */,
 				46A552EE2146020F00DDE8FD /* MainMenu.xib in Resources */,
+				844982552165BE98002C3F33 /* DisplayController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +216,7 @@
 				46E2657A214F708900AFB900 /* commands.swift in Sources */,
 				46E26577214F708900AFB900 /* Collection.swift in Sources */,
 				251D25B2215C94C4006AE126 /* ViewControlller.swift in Sources */,
+				844982542165BE98002C3F33 /* DisplayController.swift in Sources */,
 				46E2657D214F708900AFB900 /* IO.swift in Sources */,
 				84F38C422160C19500EDF5F4 /* ImageController.swift in Sources */,
 				251D25B0215C88F2006AE126 /* Document.swift in Sources */,
