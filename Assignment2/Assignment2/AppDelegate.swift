@@ -12,12 +12,18 @@ import AVFoundation
 import Quartz
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
     @objc dynamic var mediaFiles = NSMutableArray()
     
-    //var playView = AVPlayer()
-    //var soundPlayer =  AVAudioPlayer()
+<<<<<<< HEAD
+    
+=======
+    var isSearching = false
+    var filterData = [String]()
+    var playView = AVPlayer();
+    var soundPlayer =  AVAudioPlayer();
+>>>>>>> bbb9ac731edffbb78b3389429f5100d84610539b
     @IBOutlet weak var window: NSWindow!
     var last = MMResultSet()
     @IBOutlet var outletTextView: NSTextView!
@@ -27,6 +33,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var outletscroll: NSScrollView!
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var tableContent: NSScrollView!
+    
+    @IBOutlet weak var searchBar: NSSearchField!
     @IBOutlet weak var searchTab: NSSearchField!
     @IBOutlet weak var searchForward: NSButton!
     @IBOutlet weak var searchBackward: NSButton!
@@ -43,7 +51,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let aboutWindow = aboutPageController();
     let imageWindow = DisplayController();
-    //let audiotest: AVAudioPlayer
+<<<<<<< HEAD
+    
+=======
+    //searchBar.delegate = self
+>>>>>>> bbb9ac731edffbb78b3389429f5100d84610539b
     
 //    @IBAction func play(_ sender: NSButtonCell) {
 //        print("playing") ;
@@ -227,4 +239,44 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
+//    func tableView(_tableView: NSTableView, numebrOfRowsInSection section: Int) -> Int {
+//        if isSearching {
+//            return filterData.count
+//        }
+//        return mediaFiles.count
+//    }
+//
+//    func tableView(_tableView: NSTableView, cellForRowAt indexPath:IndexPath)->NSTableView {
+//
+//        if let cell = tableView.dequeueReusableCell(withIdentifier:"DataCell", for:IndexPath) as? DataCell {
+//            let text: String!
+//
+//            if isSearching{
+//                text = filterData[IndexPath.row]
+//            }else {
+//                text = Data[IndexPath.row]
+//            }
+//            cell.configureCell(data:text)
+//            return cell
+//        }else{
+//            return NSTableView()
+//        }
+//    }
+//
+//    func searchBar(_searchBar:NSSearchField, textDidChange searchtext: String) {
+//        if searchBar.text == nil || searchBar.text == "" {
+//            isSearching = false
+//            view.endEditing(true)
+//            tableView.reloadData()
+//        }else{
+//            isSearching = true
+//            filterData = data.filter({$0 == searchBar.text})
+//            tableView.reloadData()
+//        }
+//    }
+    
+    
+    
 }
+
+//https://www.youtube.com/watch?v=D5wSYcNaM18
