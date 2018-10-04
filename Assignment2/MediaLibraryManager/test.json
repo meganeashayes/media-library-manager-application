@@ -38,5 +38,14 @@
   "resolution" : "480p",
   "runtime": "00:00"
   }
+  },
+  {
+  "fullpath": "/home/cshome/m/mhayes/346/Assignment 2/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.m4a",
+  "type": "video",
+  "metadata": {
+  "creator" : "Paul Crane",
+  "resolution" : "480p",
+  "runtime": "00:00"
+  }
   }
   ]

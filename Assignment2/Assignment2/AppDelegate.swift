@@ -16,10 +16,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc dynamic var mediaFiles = NSMutableArray()
     
-    var playView = AVPlayer();
-    var soundPlayer =  AVAudioPlayer();
+    //var playView = AVPlayer()
+    //var soundPlayer =  AVAudioPlayer()
     @IBOutlet weak var window: NSWindow!
-    var library: Collection = Collection()
     var last = MMResultSet()
     @IBOutlet var outletTextView: NSTextView!
     @IBOutlet weak var outletImage: NSImageView!
@@ -39,35 +38,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var imageNotes: NSTextField!
     @IBOutlet weak var imageInformation: NSTextField!
     @IBOutlet weak var displayImage: NSImageView!
+    @IBOutlet weak var outletNotes: NSTextField!
+    
     
     let aboutWindow = aboutPageController();
     let imageWindow = DisplayController();
+    //let audiotest: AVAudioPlayer
     
-    @IBAction func play(_ sender: NSButtonCell) {
-        print("playing") ;
-        print ("playing2");
-//        soundPlayer.play();
-        playView.play();
-        
-    }
+//    @IBAction func play(_ sender: NSButtonCell) {
+//        print("playing") ;
+//        print ("playing2");
+////        soundPlayer.play();
+//        playView.play();
+//        
+//    }
     
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-        // print("test");
-      
-        //openAboutWindow(self)
         
         let bundlePath = Bundle.main.resourcePath
         
-         print("hello")
-         print(bundlePath!)
-
-        //outletImage.image = NSImage(contentsOfFile: "/home/cshome/s/skumari/346/assigNew/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.png")
-        //outletImage.image = NSImage(contentsOfFile: bundlePath! + "/test.png")
-        outletImage.image = NSImage(contentsOfFile: mediaFiles[0] as! String)
-        print("\(mediaFiles[0])")
-        outletTextView.string = "An Image"
+        outletTextView.isHidden = true
+        outletscroll.isHidden = true
+        outletNotes.isHidden = true
+        outletVideo.isHidden = true
+        outletImage.isHidden = true
+        
+        //outletImage.image = NSImage(contentsOfFile: mediaFiles[0] as! String)
+        //print("\(mediaFiles[0])")
+        //outletTextView.string = "An Image"
         
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
             //print(filepath)
@@ -119,13 +119,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
         }
-        
-        outletscroll.isHidden=false;
-        outletVideo.isHidden=false;
-        outletImage.isHidden = false;
-        
-        
-
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -185,12 +178,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func tableViewAction(_ sender: Any) {
         let index: Int = tableView.selectedRow
         if index > -1 {
-            imageWindow.window?.setIsVisible(true)
-            let file: File =  mediaFiles[index] as! File
             
+            let file: File =  mediaFiles[index] as! File
+            //imageWindow.displayMedia(file: file)
             let range = NSRange(location: 0, length: file.filename.utf16.count)
             let regexImage = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].png")
             let regexVideo = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].mov")
+            let regexAudio = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].m4a")
+            outletscroll.isHidden = false
+            outletTextView.isHidden = false
+            outletNotes.isHidden = false
             if (regexImage.firstMatch(in: file.filename, options: [], range: range) != nil) {
                 outletImage.isHidden = false
                 outletTextView.string = "Image information\n"
@@ -204,12 +201,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 outletTextView.string = "Image information\n"
                 outletTextView.string.append("\(file.metadata[0])\n")
                 outletTextView.string.append("\(file.metadata[1])\n")
-                let fileURL = NSURL(fileURLWithPath: file.fullpath);
-                playView = AVPlayer(url: fileURL as URL);
-                outletVideo.player = playView ;
+                let fileURL = NSURL(fileURLWithPath: file.fullpath)
+                let playView = AVPlayer(url: fileURL as URL)
+                outletVideo.player = playView
                 outletImage.isHidden = true
                 //outletImage.image = NSImage(contentsOfFile: file.fullpath)
+            } else if (regexAudio.firstMatch(in: file.filename, options: [], range: range) != nil) {
+                outletVideo.isHidden = false
+                let fileURL = NSURL(fileURLWithPath: file.fullpath)
+                let playView = AVPlayer(url: fileURL as URL)
+                outletVideo.player = playView
+                outletTextView.string = "Image information\n"
+                outletTextView.string.append("\(file.metadata[0])\n")
+                outletTextView.string.append("\(file.metadata[1])\n")
+                outletImage.isHidden = true
             }
+            //imageWindow.window?.setIsVisible(true)
 //            outletTextView.string = "Image information"
 //            outletTextView.string.append("\(file.metadata[0])")
 //            outletTextView.string.append("\(file.metadata[1])")
