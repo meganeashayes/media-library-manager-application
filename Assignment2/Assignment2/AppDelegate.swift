@@ -173,25 +173,47 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //
 //        outletImage.layer?.setAffineTransform(t)
 //        outletImage.layer?.setAffineTransform(CGAffineTransform.identity)
-        
-        let size:NSSize = outletImage.bounds.size
-        
-        let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9);
-        
-        outletImage.setBoundsSize(newSize);
+        outletImage.scaleUnitSquare(to: NSSize(width: 1.25, height: 1.25))
+//        let size:NSSize = outletImage.bounds.size
+//
+//        let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9);
+//
+//        outletImage.setBoundsSize(newSize);
     }
     
     
     @IBAction func tableViewAction(_ sender: Any) {
-        print("hello")
         let index: Int = tableView.selectedRow
         if index > -1 {
             let file: File =  mediaFiles[index] as! File
-            outletTextView.string = "Metadata: \(file.metadata)"
-            outletImage.image = NSImage(contentsOfFile: file.fullpath)
-            //outletTextView.string = "Test Line 191"
+            let range = NSRange(location: 0, length: file.filename.utf16.count)
+            let regexImage = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].png")
+            let regexVideo = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].mov")
+            if (regexImage.firstMatch(in: file.filename, options: [], range: range) != nil) {
+                outletImage.isHidden = false
+                outletTextView.string = "Image information\n"
+                outletTextView.string.append("\(file.metadata[0])\n")
+                outletTextView.string.append("\(file.metadata[1])\n")
+                outletTextView.isEditable = false
+                outletImage.image = NSImage(contentsOfFile: file.fullpath)
+                outletVideo.isHidden = true
+            } else if (regexVideo.firstMatch(in: file.filename, options: [], range: range) != nil) {
+                outletVideo.isHidden = false
+                outletTextView.string = "Image information\n"
+                outletTextView.string.append("\(file.metadata[0])\n")
+                outletTextView.string.append("\(file.metadata[1])\n")
+                let fileURL = NSURL(fileURLWithPath: file.fullpath);
+                playView = AVPlayer(url: fileURL as URL);
+                outletVideo.player = playView ;
+                outletImage.isHidden = true
+                //outletImage.image = NSImage(contentsOfFile: file.fullpath)
+            }
+//            outletTextView.string = "Image information"
+//            outletTextView.string.append("\(file.metadata[0])")
+//            outletTextView.string.append("\(file.metadata[1])")
+//            outletImage.image = NSImage(contentsOfFile: file.fullpath)
         } else {
-            outletTextView.string = "Test Line 193"
+            outletTextView.string = "File doesn't exist"
         }
         
     }

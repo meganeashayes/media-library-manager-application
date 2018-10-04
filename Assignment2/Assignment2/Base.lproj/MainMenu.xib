@@ -706,7 +706,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="747" height="531"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1440"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="747" height="531"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1030,19 +1030,8 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p6v-fE-QGp">
-                        <rect key="frame" x="332" y="358" width="69" height="32"/>
-                        <buttonCell key="cell" type="push" title="start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xpG-PS-ATs">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="zoomOut:" target="Voe-Tx-rLC" id="ZD2-IF-OmG"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="p6v-fE-QGp" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="145" id="11B-Be-K7e"/>
                     <constraint firstItem="SKY-4G-bmy" firstAttribute="leading" secondItem="D6J-kf-dS6" secondAttribute="trailing" constant="68" id="4th-lu-qwX"/>
                     <constraint firstItem="hIY-Wj-PuE" firstAttribute="leading" secondItem="klh-gl-Gjp" secondAttribute="trailing" constant="66" id="64e-vz-kE8"/>
                     <constraint firstItem="klh-gl-Gjp" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="9yV-nx-VdF"/>
@@ -1050,20 +1039,19 @@
                     <constraint firstItem="8Qw-AH-kMz" firstAttribute="baseline" secondItem="b7R-No-vDP" secondAttribute="baseline" id="DLS-5V-SDS"/>
                     <constraint firstItem="klh-gl-Gjp" firstAttribute="top" secondItem="SKY-4G-bmy" secondAttribute="top" id="IWA-IQ-4fd"/>
                     <constraint firstItem="SKY-4G-bmy" firstAttribute="leading" secondItem="5n5-mO-huv" secondAttribute="trailing" constant="47" id="NMg-9E-uHY"/>
-                    <constraint firstItem="Tp2-Pv-Dvg" firstAttribute="top" secondItem="p6v-fE-QGp" secondAttribute="bottom" constant="26" id="NrY-2Q-lcE"/>
                     <constraint firstItem="hIY-Wj-PuE" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="97" id="PcQ-F5-MPR"/>
                     <constraint firstItem="SKY-4G-bmy" firstAttribute="leading" secondItem="Tp2-Pv-Dvg" secondAttribute="trailing" constant="47" id="RGL-AQ-Ve2"/>
+                    <constraint firstItem="Tp2-Pv-Dvg" firstAttribute="top" secondItem="5n5-mO-huv" secondAttribute="bottom" constant="49" id="SyE-Du-1N5"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="leading" secondItem="Tp2-Pv-Dvg" secondAttribute="leading" constant="-2" id="WP1-A2-lF7"/>
                     <constraint firstItem="8Qw-AH-kMz" firstAttribute="top" secondItem="klh-gl-Gjp" secondAttribute="bottom" constant="10" id="cZc-Cr-5ir"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="10" id="eSo-oj-0E4"/>
                     <constraint firstAttribute="bottom" secondItem="SKY-4G-bmy" secondAttribute="bottom" id="grP-3X-rQn"/>
                     <constraint firstAttribute="trailing" secondItem="SKY-4G-bmy" secondAttribute="trailing" id="l92-WE-6qr"/>
-                    <constraint firstItem="p6v-fE-QGp" firstAttribute="leading" secondItem="klh-gl-Gjp" secondAttribute="trailing" constant="141" id="lTp-gH-rgK"/>
-                    <constraint firstItem="p6v-fE-QGp" firstAttribute="top" secondItem="5n5-mO-huv" secondAttribute="bottom" constant="2" id="nL5-7M-3h1"/>
                     <constraint firstItem="b7R-No-vDP" firstAttribute="leading" secondItem="8Qw-AH-kMz" secondAttribute="trailing" constant="13" id="nRc-sl-8Yc"/>
                     <constraint firstItem="8Qw-AH-kMz" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="8" id="nuy-y9-MdJ"/>
                     <constraint firstAttribute="bottom" secondItem="D6J-kf-dS6" secondAttribute="bottom" constant="-1" id="oI2-WC-Om8"/>
                     <constraint firstAttribute="bottom" secondItem="8Qw-AH-kMz" secondAttribute="bottom" constant="8" id="pNa-te-hxH"/>
+                    <constraint firstItem="Tp2-Pv-Dvg" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="192" id="rWQ-Sa-lco"/>
                     <constraint firstItem="SKY-4G-bmy" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="tQD-eh-g96"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="leading" secondItem="klh-gl-Gjp" secondAttribute="trailing" constant="29" id="v68-c3-Zmi"/>
                     <constraint firstItem="D6J-kf-dS6" firstAttribute="top" secondItem="Tp2-Pv-Dvg" secondAttribute="bottom" constant="8" id="vDF-ox-lsV"/>
@@ -1096,7 +1084,7 @@
             <autoresizingMask key="autoresizingMask"/>
             <clipView key="contentView" drawsBackground="NO" id="8pe-Ob-EQI">
                 <rect key="frame" x="1" y="1" width="223" height="133"/>
-                <autoresizingMask key="autoresizingMask"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="gjr-bz-gJS">
                         <rect key="frame" x="0.0" y="-1" width="223" height="133"/>
@@ -1158,7 +1146,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="339" height="269"/>
                                         <clipView key="contentView" id="v1E-8E-Ze2">
                                             <rect key="frame" x="1" y="0.0" width="337" height="268"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Pw6-Qw-eZu" viewBased="YES" id="aXk-Lx-ogd">
                                                     <rect key="frame" x="0.0" y="0.0" width="337" height="245"/>
