@@ -19,8 +19,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
 
     var isSearching = false
     var filterData = [String]()
-    var playView = AVPlayer();
-    var soundPlayer =  AVAudioPlayer();
+    var playView = AVPlayer()
+    var soundPlayer =  AVAudioPlayer()
     
     @IBOutlet weak var window: NSWindow!
     var last = MMResultSet()
@@ -47,18 +47,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     @IBOutlet weak var outletNotes: NSTextField!
     
     
-    let aboutWindow = aboutPageController();
-    let imageWindow = DisplayController();
+    let aboutWindow = aboutPageController()
 
     //searchBar.delegate = self
-    
-//    @IBAction func play(_ sender: NSButtonCell) {
-//        print("playing") ;
-//        print ("playing2");
-////        soundPlayer.play();
-//        playView.play();
-//        
-//    }
     
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -72,60 +63,20 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         outletVideo.isHidden = true
         outletImage.isHidden = true
         
-        //outletImage.image = NSImage(contentsOfFile: mediaFiles[0] as! String)
-        //print("\(mediaFiles[0])")
-        //outletTextView.string = "An Image"
-        
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
-            //print(filepath)
 
             do {
                 let contents = try String(contentsOfFile: filepath)
-                print(contents)
-                outletTextView.string = contents;
-                outletTextView.isEditable = false ;
+                outletTextView.string = contents
+                outletTextView.isEditable = false
 
             } catch {
-                // contents could not be loaded
+                print("Contents could not be loaded")
             }
         } else {
-            print ("else");
+            print ("Filepath could not be found")
         }
         
-       
-        
-//        let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.mov");
-//        playView = AVPlayer(url: fileURL as URL);
-//        outletVideo.player = playView ;
-//        print("video")
-        
-//        do {
-//            soundPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "m4a")!))
-//            soundPlayer.prepareToPlay();
-//            print("playing")
-//        } catch {
-//        }
-        
-        //To get metadata of audio filebf
-        //let fileURL = NSURL(fileURLWithPath: "/home/cshome/s/skumari/346/assignment-two-media-manager-gui-swift-assignment-2sweta/Assignment2/test.m4a");
-        let fileURL = NSURL(fileURLWithPath: bundlePath! + "/test.m4a");
-        let asset = AVAsset(url: fileURL as URL);
-        //asset.player = playView ;
-        print("audio")
-        let formatsKey = "availableMetadataFormats"
-        
-       asset.loadValuesAsynchronously(forKeys: [formatsKey]) {
-            var error: NSError? = nil
-            let status = asset.statusOfValue(forKey: formatsKey, error: &error)
-            if status == .loaded {
-                for format in asset.availableMetadataFormats {
-                    let metadata = asset.metadata(forFormat: format)
-                    // process format-specific metadata collection
-                    print(metadata)
-                    
-                }
-            }
-        }
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -153,19 +104,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         print("\(mediaFiles[1])")
     }
     
-    func tableView(_ tableView: NSTableView, didSelectRowAt indexPath: IndexPath) {
-        // self.view.backgroundColor = UIColor.blue
-        //let detail: NSImageView = self.outletImage
-        //outletImage.image = NSImage(named: mediaFiles[indexPath.item]["image"])
-        //detail.image =
-
-       // let detail:DetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        detail.strlbl1 = array1[indexPath.row]
-//        detail.strlbl2 = array2[indexPath.row]
-//        detail.strimg = arrimg[indexPath.row]
-//        self.navigationController?.pushViewController(detail, animated: true)
-    }
-    
     @IBAction func zoomIn(_ sender: NSButton) {
 //        var t = CGAffineTransform.identity
 //        t = t.translatedBy(x: -100, y: -300)
@@ -176,9 +114,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         outletImage.scaleUnitSquare(to: NSSize(width: 1.25, height: 1.25))
 //        let size:NSSize = outletImage.bounds.size
 //
-//        let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9);
+//        let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9)
 //
-//        outletImage.setBoundsSize(newSize);
+//        outletImage.setBoundsSize(newSize)
     }
     
     
@@ -187,7 +125,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         if index > -1 {
             
             let file: File =  mediaFiles[index] as! File
-            //imageWindow.displayMedia(file: file)
             let range = NSRange(location: 0, length: file.filename.utf16.count)
             let regexImage = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].png")
             let regexVideo = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].mov")
@@ -223,55 +160,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
                 outletTextView.string.append("\(file.metadata[1])\n")
                 outletImage.isHidden = true
             }
-            //imageWindow.window?.setIsVisible(true)
-//            outletTextView.string = "Image information"
-//            outletTextView.string.append("\(file.metadata[0])")
-//            outletTextView.string.append("\(file.metadata[1])")
-//            outletImage.image = NSImage(contentsOfFile: file.fullpath)
         } else {
             outletTextView.string = "File doesn't exist"
         }
         
     }
     
-//    func tableView(_tableView: NSTableView, numebrOfRowsInSection section: Int) -> Int {
-//        if isSearching {
-//            return filterData.count
-//        }
-//        return mediaFiles.count
-//    }
-//
-//    func tableView(_tableView: NSTableView, cellForRowAt indexPath:IndexPath)->NSTableView {
-//
-//        if let cell = tableView.dequeueReusableCell(withIdentifier:"DataCell", for:IndexPath) as? DataCell {
-//            let text: String!
-//
-//            if isSearching{
-//                text = filterData[IndexPath.row]
-//            }else {
-//                text = Data[IndexPath.row]
-//            }
-//            cell.configureCell(data:text)
-//            return cell
-//        }else{
-//            return NSTableView()
-//        }
-//    }
-//
-//    func searchBar(_searchBar:NSSearchField, textDidChange searchtext: String) {
-//        if searchBar.text == nil || searchBar.text == "" {
-//            isSearching = false
-//            view.endEditing(true)
-//            tableView.reloadData()
-//        }else{
-//            isSearching = true
-//            filterData = data.filter({$0 == searchBar.text})
-//            tableView.reloadData()
-//        }
-//    }
-    
-    
-    
 }
-
-//https://www.youtube.com/watch?v=D5wSYcNaM18
