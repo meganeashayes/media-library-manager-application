@@ -188,6 +188,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if index > -1 {
             let file: File =  mediaFiles[index] as! File
             outletTextView.string = "Metadata: \(file.metadata)"
+            outletImage.image = NSImage(contentsOfFile: file.fullpath)
             //outletTextView.string = "Test Line 191"
         } else {
             outletTextView.string = "Test Line 193"
