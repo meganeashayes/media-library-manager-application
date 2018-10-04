@@ -182,6 +182,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     
+    @IBAction func tableViewAction(_ sender: Any) {
+        print("hello")
+        let index: Int = tableView.selectedRow
+        if index > -1 {
+            let file: File =  mediaFiles[index] as! File
+            outletTextView.string = "Metadata: \(file.metadata)"
+            //outletTextView.string = "Test Line 191"
+        } else {
+            outletTextView.string = "Test Line 193"
+        }
+        
+    }
     
 }
 //https://www.youtube.com/watch?v=VfVYX7nO9dQ
