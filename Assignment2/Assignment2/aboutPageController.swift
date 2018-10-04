@@ -18,15 +18,15 @@ class aboutPageController: NSWindowController {
     @IBOutlet weak var aboutWindow: NSView!
     @IBOutlet weak var aboutWindowText: NSTextField!
     
+    /**
+     * On window load, displays some information about the application
+     */
     override func windowDidLoad() {
         super.windowDidLoad()
 
-        // about window regarding app
+        // Set features to display in the window to give some information about the application
         aboutWindow.window?.setTitleWithRepresentedFilename("About")
-                //let aboutSize: NSSize = CGSize(width: 400, height: 450)
-                //aboutWindow.window?.setIsVisible(true)
-                //aboutWindow.setFrameSize(aboutSize)
-        aboutWindowText.stringValue = "An application to manage media collection.\n Developed by Sweta Kumari and Megan Hayes created for the University of Otago, COSC-346 Assignment2."
+        aboutWindowText.stringValue = "An application to manage a media collection.\n Developed by Sweta Kumari and Megan Hayes\nCreated for the University of Otago COSC346 Assignment 2"
     }
     
 }

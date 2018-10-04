@@ -12,29 +12,20 @@ class ImportFiles: NSObject {
     
     @objc dynamic var path: Float = 0.05
     
-    
     @objc func importMediaFiles(mediaFiles: NSMutableArray)  {
         let importer = JSONImporter()
         let bundlePath = Bundle.main.resourcePath
         var files: [MMFile]
         do {
             files = try importer.read(filename: bundlePath!+"/test.json")
-            Swift.print(files.count)
-            Swift.print(files[0].path)
-            Swift.print(files[1].path)
             var i: Int = 0
             for file in files {
                 var newFile = File(path: file.path, filename: file.filename, metadata: file.metadata)
-                
                 mediaFiles.add(newFile)
-                print(mediaFiles[i])
                 i += 1
             }
-            print("line33 from importFiles")
-            
-
         } catch {
-            print("Error found line 149")
+            print("Could not import files")
         }
     }
     
