@@ -121,13 +121,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         
     }
     
-<<<<<<< HEAD
+
     /// Zooms in the view of the current media
     /// - Parameters:
     ///     - sender: NSButton
-=======
     /// Zooms in the view of the current image on clicking - button
->>>>>>> 53eb3532ed192b3e6605e22d1c0af3239845caf6
     @IBAction func zoomIn(_ sender: NSButton) {
         //        var t = CGAffineTransform.identity
         //        t = t.translatedBy(x: -100, y: -300)
