@@ -120,6 +120,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     }
     
     /// Zooms in the view of the current media
+    /// - Parameters:
+    ///     - sender: NSButton
     @IBAction func zoomIn(_ sender: NSButton) {
         //        var t = CGAffineTransform.identity
         //        t = t.translatedBy(x: -100, y: -300)
