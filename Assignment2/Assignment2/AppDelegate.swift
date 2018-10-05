@@ -45,6 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     @IBOutlet weak var imageInformation: NSTextField!
     @IBOutlet weak var displayImage: NSImageView!
     @IBOutlet weak var outletNotes: NSTextField!
+    @IBOutlet weak var outletTextFileView: NSTextView!
     
     
     let aboutWindow = aboutPageController()
@@ -63,6 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         outletNotes.isHidden = true
         outletVideo.isHidden = true
         outletImage.isHidden = true
+        outletTextFileView.isHidden = true
         
         let importer = ImportFiles()
         importer.importMediaFiles(mediaFiles: mediaFiles)
@@ -161,6 +163,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
                 outletTextView.isEditable = false
                 outletImage.image = NSImage(contentsOfFile: file.fullpath)
                 outletVideo.isHidden = true
+                outletTextFileView.isHidden = true
             } else if (regexVideo.firstMatch(in: file.filename, options: [], range: range) != nil) {
                 outletVideo.isHidden = false
                 outletTextView.string = "Video information:\n"
@@ -170,6 +173,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
                 let playView = AVPlayer(url: fileURL as URL)
                 outletVideo.player = playView
                 outletImage.isHidden = true
+                outletTextFileView.isHidden = true
                 //outletImage.image = NSImage(contentsOfFile: file.fullpath)
             } else if (regexAudio.firstMatch(in: file.filename, options: [], range: range) != nil) {
                 outletVideo.isHidden = false
@@ -180,8 +184,21 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
                 outletTextView.string.append("\(file.metadata[0])\n")
                 outletTextView.string.append("\(file.metadata[1])\n")
                 outletImage.isHidden = true
+                outletTextFileView.isHidden = true
             } else if (regexDocument.firstMatch(in: file.filename, options: [], range: range) != nil) {
-                
+                do {
+                    outletTextFileView.isHidden = false
+                    let contents = try NSString(contentsOfFile: file.filename, encoding: String.Encoding.utf8.rawValue)
+                    outletTextFileView.string = contents as String
+                    outletTextView.string = "Document information:\n"
+                    outletTextView.string.append("\(file.metadata[0])\n")
+                    outletVideo.isHidden = true
+                    outletImage.isHidden = true
+                } catch {
+                    
+                }
+                //let contents = try NSString(contentsOfFile: file.path, encoding: String.Encoding.utf8.rawValue)
+                //outletTextFileView.string = contents as String
                 outletTextView.string = "Document information:\n"
                 outletTextView.string.append("\(file.metadata[0])\n")
                 outletVideo.isHidden = true

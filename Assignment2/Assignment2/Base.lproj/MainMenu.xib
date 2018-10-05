@@ -31,6 +31,7 @@
             <connections>
                 <outlet property="outletImage" destination="Tp2-Pv-Dvg" id="0fM-SJ-tT3"/>
                 <outlet property="outletNotes" destination="ZF2-Fe-Sef" id="ksf-ow-4KG"/>
+                <outlet property="outletTextFileView" destination="4iA-VL-LYM" id="Ify-b1-z9j"/>
                 <outlet property="outletTextView" destination="IiX-va-40c" id="8c3-wT-hTV"/>
                 <outlet property="outletVideo" destination="5n5-mO-huv" id="zP9-7X-aXd"/>
                 <outlet property="outletscroll" destination="D6J-kf-dS6" id="wjp-av-qDF"/>
@@ -1041,6 +1042,32 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iA-VL-LYM">
+                        <rect key="frame" x="228" y="353" width="301" height="168"/>
+                        <clipView key="contentView" id="8QW-cq-H5I">
+                            <rect key="frame" x="1" y="1" width="284" height="166"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="vbW-rh-jcU">
+                                    <rect key="frame" x="0.0" y="0.0" width="284" height="166"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="minSize" width="284" height="166"/>
+                                    <size key="maxSize" width="463" height="10000000"/>
+                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="zha-nu-RiU">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="bO3-Ml-265">
+                            <rect key="frame" x="285" y="1" width="15" height="166"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="trailing" secondItem="Tp2-Pv-Dvg" secondAttribute="trailing" id="7Zi-K9-CEj"/>
@@ -1048,11 +1075,13 @@
                     <constraint firstItem="D6J-kf-dS6" firstAttribute="top" secondItem="5n5-mO-huv" secondAttribute="bottom" constant="6" id="Ewp-4a-xmt"/>
                     <constraint firstItem="ZF2-Fe-Sef" firstAttribute="top" secondItem="D6J-kf-dS6" secondAttribute="bottom" constant="8" symbolic="YES" id="GH1-Zz-xcC"/>
                     <constraint firstAttribute="bottom" secondItem="b7R-No-vDP" secondAttribute="bottom" constant="8" id="H6s-ne-Xgj"/>
+                    <constraint firstItem="4iA-VL-LYM" firstAttribute="leading" secondItem="Tp2-Pv-Dvg" secondAttribute="leading" id="Hd1-gI-42n"/>
                     <constraint firstItem="Tp2-Pv-Dvg" firstAttribute="leading" secondItem="D6J-kf-dS6" secondAttribute="leading" id="ICR-OH-q0v"/>
                     <constraint firstAttribute="bottom" secondItem="SKY-4G-bmy" secondAttribute="bottom" id="Jca-o5-Q85"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="10" id="M13-PK-SQq"/>
                     <constraint firstAttribute="bottom" secondItem="ZF2-Fe-Sef" secondAttribute="bottom" constant="39" id="MIv-zP-bzg"/>
                     <constraint firstItem="hIY-Wj-PuE" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="97" id="O1J-fC-Vsq"/>
+                    <constraint firstItem="4iA-VL-LYM" firstAttribute="trailing" secondItem="5n5-mO-huv" secondAttribute="trailing" id="OdH-aA-uPi"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="bottom" secondItem="Tp2-Pv-Dvg" secondAttribute="bottom" id="SZ7-1K-ULY"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="trailing" secondItem="D6J-kf-dS6" secondAttribute="trailing" id="URH-tm-qpw"/>
                     <constraint firstItem="klh-gl-Gjp" firstAttribute="top" secondItem="SKY-4G-bmy" secondAttribute="top" id="Ukx-3a-g0w"/>
@@ -1064,9 +1093,11 @@
                     <constraint firstItem="ZF2-Fe-Sef" firstAttribute="leading" secondItem="D6J-kf-dS6" secondAttribute="leading" id="fOs-Vy-6c3"/>
                     <constraint firstItem="b7R-No-vDP" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="89" id="h22-3c-1ak"/>
                     <constraint firstItem="ZF2-Fe-Sef" firstAttribute="trailing" secondItem="D6J-kf-dS6" secondAttribute="trailing" id="i1o-lt-9CE"/>
+                    <constraint firstItem="4iA-VL-LYM" firstAttribute="top" secondItem="5n5-mO-huv" secondAttribute="top" id="ilx-4A-PTi"/>
                     <constraint firstItem="SKY-4G-bmy" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="nGR-Ql-8IE"/>
                     <constraint firstItem="klh-gl-Gjp" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="oFF-K9-CaS"/>
                     <constraint firstItem="hIY-Wj-PuE" firstAttribute="leading" secondItem="klh-gl-Gjp" secondAttribute="trailing" constant="66" id="of5-F2-weA"/>
+                    <constraint firstItem="4iA-VL-LYM" firstAttribute="bottom" secondItem="Tp2-Pv-Dvg" secondAttribute="bottom" id="rvl-mQ-dS6"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="228" id="wjY-cu-BWU"/>
                     <constraint firstItem="SKY-4G-bmy" firstAttribute="leading" secondItem="Tp2-Pv-Dvg" secondAttribute="trailing" constant="47" id="yBC-Pt-RSM"/>
                 </constraints>
