@@ -14,7 +14,7 @@ import Quartz
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
-    // Outlets linked to main window
+    /// Outlets linked to main window
     @IBOutlet weak var window: NSWindow!
     @IBOutlet var outletTextView: NSTextView!
     @IBOutlet weak var outletImage: NSImageView!
@@ -31,9 +31,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     @IBOutlet weak var fitButton: NSButton!
     @IBOutlet weak var lastPageButton: NSButton!
     @IBOutlet weak var nextPageButton: NSButton!
-    @IBOutlet weak var imageNotes: NSTextField!
-    @IBOutlet weak var imageInformation: NSTextField!
-    @IBOutlet weak var displayImage: NSImageView!
     @IBOutlet weak var outletNotes: NSTextField!
     @IBOutlet weak var outletTextFileView: NSTextView!
     
@@ -122,13 +119,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         
     }
     
-
-<<<<<<< HEAD
-=======
     /// Zooms in the view of the current media
     /// - Parameters:
     ///     - sender: NSButton
->>>>>>> 318cc03ecea7dfde7783f00c2ce8609326d61211
     /// Zooms in the view of the current image on clicking - button
     @IBAction func zoomIn(_ sender: NSButton) {
         //        var t = CGAffineTransform.identity
