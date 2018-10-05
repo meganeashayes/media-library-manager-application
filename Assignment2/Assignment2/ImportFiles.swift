@@ -8,10 +8,12 @@
 
 import Cocoa
 
+// class importFiles: is a subclass of NSObject, which implements a model, in the MVC pattern. NSArray Controller, class name is set to this class and keys are bind to
 class ImportFiles: NSObject {
     
-    @objc dynamic var path: Float = 0.05
-    
+    // Function to add files to mediaFiles(NSMutableArray) from json file type
+    // - Parameters:
+    //   - mediafiles: dynamic ordered collection to which files are added
     @objc func importMediaFiles(mediaFiles: NSMutableArray)  {
         let importer = JSONImporter()
         let bundlePath = Bundle.main.resourcePath
@@ -28,13 +30,4 @@ class ImportFiles: NSObject {
             print("Could not import files")
         }
     }
-    
-    override func setNilValueForKey(_ key: String) {
-        if key == "expectedRaise" {
-            //path = 0.0
-        }else{
-            super.setNilValueForKey(key)
-        }
-    }
-
 }
