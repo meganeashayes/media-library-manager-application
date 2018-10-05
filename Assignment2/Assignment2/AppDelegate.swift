@@ -137,10 +137,29 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     }
     
     
+  
     @IBAction func zoomFit(_ sender: NSButton) {
-        let size:NSSize = outletImage.bounds.size
-        outletImage.setBoundsSize(size)
+        //let size:NSSize = outletImage.image!.size
+        //print(size)
+        //outletImage.setBoundsSize(size)
+       //outletImage.sizeToFit()
+        //print("line 146 zoomFit")
         
+//                var t = CGAffineTransform.identity
+//                t = t.translatedBy(x: -100, y: -300)
+//                t = t.scaledBy(x: 2, y: 2)
+//
+//                outletImage.layer?.setAffineTransform(t)
+//                outletImage.layer?.setAffineTransform(CGAffineTransform.identity)
+//                let size:NSSize = outletImage.bounds.size
+//
+//                let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9)
+//
+//                outletImage.setBoundsSize(newSize)
+        //let rect = AVMakeRectWithAspectRatioInsideRect(image.size, imageView.bounds)
+        //let size:NSSize = outletImage.bounds.size
+        let newSize: NSSize = NSMakeSize(1, 1)
+        outletImage.resizeSubviews(withOldSize: newSize)
     }
     
     /// Enables media (image/video etc.) to be displayed in the application when the media name

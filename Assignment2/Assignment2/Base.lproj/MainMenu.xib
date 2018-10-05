@@ -847,7 +847,7 @@
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                     <connections>
-                                        <action selector="zoomFit:" target="-2" id="SJd-bd-A0K"/>
+                                        <action selector="zoomFit:" target="Voe-Tx-rLC" id="ark-qP-Cdg"/>
                                     </connections>
                                 </button>
                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e1V-6l-dVZ">
