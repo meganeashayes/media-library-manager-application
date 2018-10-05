@@ -12,8 +12,8 @@ import Cocoa
 class ImportFiles: NSObject {
     
     // Function to add files to mediaFiles(NSMutableArray) from json file type
-    // - Parameters:
-    //   - mediafiles: dynamic ordered collection to which files are added
+    /// - Parameters:
+    ///     - mediafiles: dynamic ordered collection to which files are added
     @objc func importMediaFiles(mediaFiles: NSMutableArray)  {
         let importer = JSONImporter()
         let bundlePath = Bundle.main.resourcePath
