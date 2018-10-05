@@ -23,17 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var tableContent: NSScrollView!
     @IBOutlet weak var searchBar: NSSearchField!
-    @IBOutlet weak var searchTab: NSSearchField!
     @IBOutlet weak var searchForward: NSButton!
     @IBOutlet weak var searchBackward: NSButton!
-    @IBOutlet weak var zoomInButton: NSButton!
-    @IBOutlet weak var zoomOutButton: NSButton!
-    @IBOutlet weak var fitButton: NSButton!
-    @IBOutlet weak var lastPageButton: NSButton!
-    @IBOutlet weak var nextPageButton: NSButton!
-    @IBOutlet weak var imageNotes: NSTextField!
-    @IBOutlet weak var imageInformation: NSTextField!
-    @IBOutlet weak var displayImage: NSImageView!
+    @IBOutlet weak var searchTab: NSSearchField!
+    @IBOutlet weak var lastFileButton: NSButton!
+    @IBOutlet weak var nextFileButton: NSButton!
     @IBOutlet weak var outletNotes: NSTextField!
     @IBOutlet weak var outletTextFileView: NSTextView!
     
