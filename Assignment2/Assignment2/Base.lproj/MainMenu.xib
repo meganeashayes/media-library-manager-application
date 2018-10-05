@@ -119,6 +119,12 @@
                                     <action selector="importFiles:" target="Voe-Tx-rLC" id="BcF-2B-jG6"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Export Files" id="qsX-qr-RRg">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="exportFiles:" target="Voe-Tx-rLC" id="3gZ-Fv-CcJ"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="m54-Is-iLE"/>
                             <menuItem title="Close" keyEquivalent="w" id="DVo-aG-piG">
                                 <connections>
