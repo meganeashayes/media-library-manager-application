@@ -51,7 +51,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     //searchBar.delegate = self
     
     /// When application launches, the media containers (outlets), metadata display and media notes
-    /// are hidden automatically; these will display only once a media file is selected to be displayed. Files are imported into the library automatically on application launch.
+    /// are hidden automatically; these will display only once a media file is selected to be displayed.
+    /// Files are imported into the library automatically on application launch.
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         self.window?.setTitleWithRepresentedFilename("Media Library App")
@@ -122,9 +123,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     }
     
 
+<<<<<<< HEAD
+=======
     /// Zooms in the view of the current media
     /// - Parameters:
     ///     - sender: NSButton
+>>>>>>> 318cc03ecea7dfde7783f00c2ce8609326d61211
     /// Zooms in the view of the current image on clicking - button
     @IBAction func zoomIn(_ sender: NSButton) {
         //        var t = CGAffineTransform.identity
