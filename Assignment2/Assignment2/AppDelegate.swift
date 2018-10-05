@@ -55,6 +55,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     /// Files are imported into the library automatically on application launch.
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        self.window?.setTitleWithRepresentedFilename("Media Library App")
         
         let bundlePath = Bundle.main.resourcePath
         outletTextView.isHidden = true
@@ -122,6 +123,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     }
     
 
+<<<<<<< HEAD
+=======
+    /// Zooms in the view of the current media
+    /// - Parameters:
+    ///     - sender: NSButton
+>>>>>>> 318cc03ecea7dfde7783f00c2ce8609326d61211
     /// Zooms in the view of the current image on clicking - button
     @IBAction func zoomIn(_ sender: NSButton) {
         //        var t = CGAffineTransform.identity
@@ -160,8 +167,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
 //                outletImage.setBoundsSize(newSize)
         //let rect = AVMakeRectWithAspectRatioInsideRect(image.size, imageView.bounds)
         //let size:NSSize = outletImage.bounds.size
-        let newSize: NSSize = NSMakeSize(1, 1)
-        outletImage.resizeSubviews(withOldSize: newSize)
+        //let newSize: NSSize = NSMakeSize(1, 1)
+        //outletImage.resizeSubviews(withOldSize: newSize)
+        outletImage.layer?.setAffineTransform(CGAffineTransform.identity)
     }
     
     /// Enables media (image/video etc.) to be displayed in the application when the media name
