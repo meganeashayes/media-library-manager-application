@@ -140,9 +140,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         //
         //        outletImage.setBoundsSize(newSize)
     }
+
     
-    
-  
     @IBAction func zoomFit(_ sender: NSButton) {
         //let size:NSSize = outletImage.image!.size
         //print(size)
@@ -239,5 +238,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         }
         
     }
+    
+    
     
 }
