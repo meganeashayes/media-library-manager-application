@@ -54,6 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     /// are hidden automatically; these will display only once a media file is selected to be displayed. Files are imported into the library automatically on application launch.
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        self.window?.setTitleWithRepresentedFilename("Media Library App")
         
         let bundlePath = Bundle.main.resourcePath
         outletTextView.isHidden = true
@@ -158,8 +159,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
 //                outletImage.setBoundsSize(newSize)
         //let rect = AVMakeRectWithAspectRatioInsideRect(image.size, imageView.bounds)
         //let size:NSSize = outletImage.bounds.size
-        let newSize: NSSize = NSMakeSize(1, 1)
-        outletImage.resizeSubviews(withOldSize: newSize)
+        //let newSize: NSSize = NSMakeSize(1, 1)
+        //outletImage.resizeSubviews(withOldSize: newSize)
+        outletImage.layer?.setAffineTransform(CGAffineTransform.identity)
     }
     
     /// Enables media (image/video etc.) to be displayed in the application when the media name
