@@ -14,7 +14,7 @@ import Quartz
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
-    // Outlets linked to main window
+    /// Outlets linked to main window
     @IBOutlet weak var window: NSWindow!
     @IBOutlet var outletTextView: NSTextView!
     @IBOutlet weak var outletImage: NSImageView!
@@ -85,7 +85,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
     /**** FUNCTION ASSOCIATED WITH THE MAIN WINDOW OBJECT ****/
     
-    // To open About page window when clicking about aboutPage tab main menu
+    /// To open About page window when clicking about aboutPage tab main menu
+    /// - Parameters:
+    ///     - sender: the About Media Library App menu item
     @IBAction func openAboutWindow(_ sender: Any) {
         aboutWindow.window?.setIsVisible(true)
     }
@@ -93,17 +95,23 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
     
     /// Zooms out the view of the current image on clicking + button
+    /// - Parameters:
+    ///     - sender: the - (zoom out) button
     @IBAction func zoomOut(_ sender: NSButton) {
         outletImage.scaleUnitSquare(to: NSSize(width: 0.75, height: 0.75))
     }
     
     /// Imports files into the media library
+    /// - Parameters:
+    ///     - sender: the Import Files menu option
     @IBAction func importFiles(_ sender: Any) {
         let importer = ImportFiles()
         importer.importMediaFiles(mediaFiles: mediaFiles)
     }
     
     /// Exports files and saves them as a JSON file
+    /// - Parameters:
+    ///     - sender: the Export Files menu option
     @IBAction func exportFiles(_ sender: Any) {
         let exporter = JSONExporter()
         var count: Int = 0
@@ -116,6 +124,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         
     }
     
+
 
     /// Zooms in the view of the current media
     /// - Parameters:
@@ -162,11 +171,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         outletImage.layer?.setAffineTransform(CGAffineTransform.identity)
     }
     
-    /// Enables media (image/video etc.) to be displayed in the application when the media name
-    /// is clicked in the table
+    /// Enables media (image/video etc.) to be displayed in the application when the media name is clicked in the table
     ///
-    /// Uses regular expressions to identify the kind of media to display, and thus which media
-    /// container to show on the screen. Displays the metadata associated with the file in a TextView below the media container, and hides the media container which is not in use at the time
+    /// Uses regular expressions to identify the kind of media to display, and thus which media container to show on the screen.
+    /// Displays the metadata associated with the file in a TextView below the media container, and hides the media container
+    /// which is not in use at the time
+    ///
+    /// - Parameters:
+    ///     - sender: the media item clicked on the table
     @IBAction func tableViewAction(_ sender: Any) {
         let index: Int = tableView.selectedRow
         if index > -1 {
