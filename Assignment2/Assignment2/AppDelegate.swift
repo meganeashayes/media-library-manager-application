@@ -23,14 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var tableContent: NSScrollView!
     @IBOutlet weak var searchBar: NSSearchField!
-    @IBOutlet weak var searchTab: NSSearchField!
     @IBOutlet weak var searchForward: NSButton!
     @IBOutlet weak var searchBackward: NSButton!
-    @IBOutlet weak var zoomInButton: NSButton!
-    @IBOutlet weak var zoomOutButton: NSButton!
-    @IBOutlet weak var fitButton: NSButton!
-    @IBOutlet weak var lastPageButton: NSButton!
-    @IBOutlet weak var nextPageButton: NSButton!
+    @IBOutlet weak var searchTab: NSSearchField!
+    @IBOutlet weak var lastFileButton: NSButton!
+    @IBOutlet weak var nextFileButton: NSButton!
     @IBOutlet weak var outletNotes: NSTextField!
     @IBOutlet weak var outletTextFileView: NSTextView!
     
@@ -119,6 +116,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         
     }
     
+
+
     /// Zooms in the view of the current media
     /// - Parameters:
     ///     - sender: NSButton
@@ -137,9 +136,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         //
         //        outletImage.setBoundsSize(newSize)
     }
+
     
-    
-  
     @IBAction func zoomFit(_ sender: NSButton) {
         //let size:NSSize = outletImage.image!.size
         //print(size)
@@ -236,5 +234,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         }
         
     }
+    
+    
     
 }

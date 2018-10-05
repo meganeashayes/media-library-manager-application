@@ -12,7 +12,12 @@
         <customObject id="-2" userLabel="File's Owner" customClass="AppDelegate" customModule="Assignment2" customModuleProvider="target">
             <connections>
                 <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+                <outlet property="lastFileButton" destination="tfN-aL-qNx" id="Am4-5N-xkr"/>
+                <outlet property="nextFileButton" destination="FHP-Cs-B5t" id="uhq-8d-5oK"/>
+                <outlet property="searchBackward" destination="WzH-rJ-KCL" id="yRW-hw-9hg"/>
                 <outlet property="searchBar" destination="XXi-ea-QE3" id="76e-bv-mnZ"/>
+                <outlet property="searchForward" destination="AFG-Ir-2OD" id="lFY-b8-txW"/>
+                <outlet property="searchTab" destination="lzn-J1-VcA" id="Rq2-uB-Zok"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -93,7 +98,7 @@
                         <items>
                             <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
                                 <connections>
-                                    <action selector="newDocument:" target="-1" id="4Si-XN-c54"/>
+                                    <action selector="newMediaApp:" target="Voe-Tx-rLC" id="ocp-3J-CVL"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
@@ -887,7 +892,7 @@
                                 </button>
                                 <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXi-ea-QE3">
                                     <rect key="frame" x="22" y="494" width="122" height="22"/>
-                                    <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="a0d-bn-KGh">
+                                    <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" placeholderString="Search File" usesSingleLineMode="YES" bezelStyle="round" id="a0d-bn-KGh">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -901,18 +906,6 @@
                                         </binding>
                                     </connections>
                                 </searchField>
-                                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Vc-uj-Cc2">
-                                    <rect key="frame" x="19" y="372" width="126" height="28"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="28" id="0oE-sk-8XM"/>
-                                    </constraints>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="File name" drawsBackground="YES" id="Hzq-wA-3Mc">
-                                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="TZF-p5-5Dl"/>
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WzH-rJ-KCL">
                                     <rect key="frame" x="76" y="461" width="30" height="32"/>
                                     <constraints>
@@ -931,14 +924,22 @@
                                         <string key="keyEquivalent"></string>
                                     </buttonCell>
                                 </button>
+                                <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzn-J1-VcA">
+                                    <rect key="frame" x="19" y="372" width="126" height="22"/>
+                                    <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="nCx-IP-gTO">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </searchFieldCell>
+                                </searchField>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="tfN-aL-qNx" firstAttribute="baseline" secondItem="FHP-Cs-B5t" secondAttribute="baseline" id="5qZ-hV-YlH"/>
                                 <constraint firstItem="XXi-ea-QE3" firstAttribute="trailing" secondItem="AFG-Ir-2OD" secondAttribute="trailing" id="7b1-TW-jb7"/>
+                                <constraint firstItem="tfN-aL-qNx" firstAttribute="top" secondItem="YGS-LJ-r4r" secondAttribute="top" constant="158" id="8pM-3a-GaI"/>
                                 <constraint firstItem="cIQ-KZ-xuL" firstAttribute="leading" secondItem="oMZ-WZ-tFe" secondAttribute="trailing" constant="4" id="Ar4-K7-0Yx"/>
                                 <constraint firstItem="oMZ-WZ-tFe" firstAttribute="baseline" secondItem="cIQ-KZ-xuL" secondAttribute="baseline" id="CdJ-zd-JtX"/>
                                 <constraint firstItem="WzH-rJ-KCL" firstAttribute="leading" secondItem="YGS-LJ-r4r" secondAttribute="leading" constant="76" id="HNH-KI-OJz"/>
-                                <constraint firstItem="0Vc-uj-Cc2" firstAttribute="trailing" secondItem="FHP-Cs-B5t" secondAttribute="trailing" id="HyZ-RP-iXV"/>
                                 <constraint firstItem="e1V-6l-dVZ" firstAttribute="leading" secondItem="YGS-LJ-r4r" secondAttribute="leading" constant="18" id="Iuf-mj-AtA"/>
                                 <constraint firstItem="oMZ-WZ-tFe" firstAttribute="top" secondItem="WzH-rJ-KCL" secondAttribute="bottom" constant="8" symbolic="YES" id="JPm-uJ-dLy"/>
                                 <constraint firstItem="AFG-Ir-2OD" firstAttribute="leading" secondItem="WzH-rJ-KCL" secondAttribute="trailing" constant="8" symbolic="YES" id="KHo-rc-eMl"/>
@@ -947,20 +948,20 @@
                                 <constraint firstItem="WzH-rJ-KCL" firstAttribute="firstBaseline" secondItem="AFG-Ir-2OD" secondAttribute="firstBaseline" id="MSh-6C-uD3"/>
                                 <constraint firstItem="WzH-rJ-KCL" firstAttribute="baseline" secondItem="AFG-Ir-2OD" secondAttribute="baseline" id="Nr9-1d-pKG"/>
                                 <constraint firstAttribute="trailing" secondItem="XXi-ea-QE3" secondAttribute="trailing" constant="25" id="RYY-wB-4CM"/>
+                                <constraint firstItem="lzn-J1-VcA" firstAttribute="trailing" secondItem="cIQ-KZ-xuL" secondAttribute="trailing" id="RhJ-BE-ZTg"/>
                                 <constraint firstItem="WzH-rJ-KCL" firstAttribute="top" secondItem="XXi-ea-QE3" secondAttribute="bottom" constant="2" id="Ul2-Lj-pBm"/>
+                                <constraint firstItem="lzn-J1-VcA" firstAttribute="trailing" secondItem="FHP-Cs-B5t" secondAttribute="trailing" id="Wzu-0t-h8i"/>
                                 <constraint firstItem="e1V-6l-dVZ" firstAttribute="top" secondItem="XXi-ea-QE3" secondAttribute="bottom" constant="40" id="ZgA-Xd-gy7"/>
-                                <constraint firstItem="cIQ-KZ-xuL" firstAttribute="trailing" secondItem="0Vc-uj-Cc2" secondAttribute="trailing" id="Zic-AZ-Nza"/>
-                                <constraint firstItem="tfN-aL-qNx" firstAttribute="top" secondItem="0Vc-uj-Cc2" secondAttribute="bottom" constant="1" id="dWA-gT-msa"/>
+                                <constraint firstItem="tfN-aL-qNx" firstAttribute="top" secondItem="lzn-J1-VcA" secondAttribute="bottom" constant="1" id="cuv-hC-viw"/>
                                 <constraint firstItem="FHP-Cs-B5t" firstAttribute="leading" secondItem="tfN-aL-qNx" secondAttribute="trailing" constant="4" id="dr2-Tr-5x9"/>
-                                <constraint firstItem="0Vc-uj-Cc2" firstAttribute="leading" secondItem="YGS-LJ-r4r" secondAttribute="leading" constant="19" id="hrz-G0-ygN"/>
                                 <constraint firstItem="XXi-ea-QE3" firstAttribute="leading" secondItem="YGS-LJ-r4r" secondAttribute="leading" constant="22" id="iRf-Fm-2rP"/>
                                 <constraint firstAttribute="trailing" secondItem="cIQ-KZ-xuL" secondAttribute="trailing" constant="24" id="j7g-oL-lQn"/>
                                 <constraint firstItem="oMZ-WZ-tFe" firstAttribute="leading" secondItem="e1V-6l-dVZ" secondAttribute="trailing" constant="3" id="jOj-dO-OwI"/>
+                                <constraint firstItem="lzn-J1-VcA" firstAttribute="leading" secondItem="YGS-LJ-r4r" secondAttribute="leading" constant="19" id="loG-Cg-olC"/>
                                 <constraint firstItem="e1V-6l-dVZ" firstAttribute="firstBaseline" secondItem="oMZ-WZ-tFe" secondAttribute="firstBaseline" id="nrn-I3-d74"/>
                                 <constraint firstItem="tfN-aL-qNx" firstAttribute="firstBaseline" secondItem="FHP-Cs-B5t" secondAttribute="firstBaseline" id="pcT-Sv-g23"/>
                                 <constraint firstItem="XXi-ea-QE3" firstAttribute="top" secondItem="YGS-LJ-r4r" secondAttribute="top" constant="13" id="qNR-uJ-C4U"/>
                                 <constraint firstItem="tfN-aL-qNx" firstAttribute="leading" secondItem="YGS-LJ-r4r" secondAttribute="leading" constant="81" id="t9k-wg-Abh"/>
-                                <constraint firstItem="0Vc-uj-Cc2" firstAttribute="top" secondItem="e1V-6l-dVZ" secondAttribute="bottom" constant="14" id="yXN-9J-78b"/>
                             </constraints>
                             <backgroundFilters>
                                 <ciFilter name="CIGaussianBlur">
