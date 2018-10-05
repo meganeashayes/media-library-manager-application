@@ -14,16 +14,8 @@ import Quartz
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
-    @objc dynamic var mediaFiles = NSMutableArray()
-    
-    
-    var isSearching = false
-    var filterData = [String]()
-    var playView = AVPlayer()
-    var soundPlayer =  AVAudioPlayer()
-    
+    // Outlets linked to main window
     @IBOutlet weak var window: NSWindow!
-    var last = MMResultSet()
     @IBOutlet var outletTextView: NSTextView!
     @IBOutlet weak var outletImage: NSImageView!
     @IBOutlet weak var outletVideo: AVPlayerView!
@@ -46,7 +38,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     @IBOutlet weak var outletTextFileView: NSTextView!
     
     
+    //Local variables can make it internal???????????????????????????????
+    var isSearching = false
+    var filterData = [String]()
+    var playView = AVPlayer()
+    var soundPlayer =  AVAudioPlayer()
+    var last = MMResultSet()
+    
     let aboutWindow = aboutPageController()
+    @objc dynamic var mediaFiles = NSMutableArray()
     
     //searchBar.delegate = self
     
@@ -87,15 +87,16 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     }
     
     
+    /**** FUNCTION ASSOCIATED WITH THE MAIN WINDOW OBJECT ****/
     
-    // To open About page window when clicking about aboutPage tab
+    // To open About page window when clicking about aboutPage tab main menu
     @IBAction func openAboutWindow(_ sender: Any) {
         aboutWindow.window?.setIsVisible(true)
     }
     
     
     
-    /// Zooms out the view of the current media
+    /// Zooms out the view of the current image on clicking + button
     @IBAction func zoomOut(_ sender: NSButton) {
         outletImage.scaleUnitSquare(to: NSSize(width: 0.75, height: 0.75))
     }
@@ -119,9 +120,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         
     }
     
+<<<<<<< HEAD
     /// Zooms in the view of the current media
     /// - Parameters:
     ///     - sender: NSButton
+=======
+    /// Zooms in the view of the current image on clicking - button
+>>>>>>> 53eb3532ed192b3e6605e22d1c0af3239845caf6
     @IBAction func zoomIn(_ sender: NSButton) {
         //        var t = CGAffineTransform.identity
         //        t = t.translatedBy(x: -100, y: -300)
@@ -135,6 +140,32 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         //        let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9)
         //
         //        outletImage.setBoundsSize(newSize)
+    }
+    
+    
+  
+    @IBAction func zoomFit(_ sender: NSButton) {
+        //let size:NSSize = outletImage.image!.size
+        //print(size)
+        //outletImage.setBoundsSize(size)
+       //outletImage.sizeToFit()
+        //print("line 146 zoomFit")
+        
+//                var t = CGAffineTransform.identity
+//                t = t.translatedBy(x: -100, y: -300)
+//                t = t.scaledBy(x: 2, y: 2)
+//
+//                outletImage.layer?.setAffineTransform(t)
+//                outletImage.layer?.setAffineTransform(CGAffineTransform.identity)
+//                let size:NSSize = outletImage.bounds.size
+//
+//                let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9)
+//
+//                outletImage.setBoundsSize(newSize)
+        //let rect = AVMakeRectWithAspectRatioInsideRect(image.size, imageView.bounds)
+        //let size:NSSize = outletImage.bounds.size
+        let newSize: NSSize = NSMakeSize(1, 1)
+        outletImage.resizeSubviews(withOldSize: newSize)
     }
     
     /// Enables media (image/video etc.) to be displayed in the application when the media name
