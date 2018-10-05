@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
     @objc dynamic var mediaFiles = NSMutableArray()
     
-
+    
     var isSearching = false
     var filterData = [String]()
     var playView = AVPlayer()
@@ -26,12 +26,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     var last = MMResultSet()
     @IBOutlet var outletTextView: NSTextView!
     @IBOutlet weak var outletImage: NSImageView!
-    //@IBOutlet weak var outletImage: IKImageView!
     @IBOutlet weak var outletVideo: AVPlayerView!
     @IBOutlet weak var outletscroll: NSScrollView!
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var tableContent: NSScrollView!
-    
     @IBOutlet weak var searchBar: NSSearchField!
     @IBOutlet weak var searchTab: NSSearchField!
     @IBOutlet weak var searchForward: NSButton!
@@ -48,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
     
     let aboutWindow = aboutPageController()
-
+    
     //searchBar.delegate = self
     
     
@@ -56,7 +54,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         // Insert code here to initialize your application
         
         let bundlePath = Bundle.main.resourcePath
-        
         outletTextView.isHidden = true
         outletscroll.isHidden = true
         outletNotes.isHidden = true
@@ -67,12 +64,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         importer.importMediaFiles(mediaFiles: mediaFiles)
         
         if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
-
+            
             do {
                 let contents = try String(contentsOfFile: filepath)
                 outletTextView.string = contents
                 outletTextView.isEditable = false
-
+                
             } catch {
                 print("Contents could not be loaded")
             }
@@ -85,8 +82,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-   
-
+    
+    
     
     // To open About page window when clicking about aboutPage tab
     @IBAction func openAboutWindow(_ sender: Any) {
@@ -97,7 +94,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     
     
     @IBAction func zoomOut(_ sender: NSButton) {
-         outletImage.scaleUnitSquare(to: NSSize(width: 0.75, height: 0.75))
+        outletImage.scaleUnitSquare(to: NSSize(width: 0.75, height: 0.75))
     }
     
     @IBAction func importFiles(_ sender: Any) {
@@ -106,18 +103,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     }
     
     @IBAction func zoomIn(_ sender: NSButton) {
-//        var t = CGAffineTransform.identity
-//        t = t.translatedBy(x: -100, y: -300)
-//        t = t.scaledBy(x: 2, y: 2)
-//
-//        outletImage.layer?.setAffineTransform(t)
-//        outletImage.layer?.setAffineTransform(CGAffineTransform.identity)
+        //        var t = CGAffineTransform.identity
+        //        t = t.translatedBy(x: -100, y: -300)
+        //        t = t.scaledBy(x: 2, y: 2)
+        //
+        //        outletImage.layer?.setAffineTransform(t)
+        //        outletImage.layer?.setAffineTransform(CGAffineTransform.identity)
         outletImage.scaleUnitSquare(to: NSSize(width: 1.25, height: 1.25))
-//        let size:NSSize = outletImage.bounds.size
-//
-//        let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9)
-//
-//        outletImage.setBoundsSize(newSize)
+        //        let size:NSSize = outletImage.bounds.size
+        //
+        //        let newSize: NSSize = NSMakeSize(size.width * 0.9, size.height * 0.9)
+        //
+        //        outletImage.setBoundsSize(newSize)
     }
     
     /// Enables media (image/video etc.) to be displayed in the application when the media name
@@ -127,7 +124,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     @IBAction func tableViewAction(_ sender: Any) {
         let index: Int = tableView.selectedRow
         if index > -1 {
-            
             let file: File =  mediaFiles[index] as! File
             let range = NSRange(location: 0, length: file.filename.utf16.count)
             let regexImage = try! NSRegularExpression(pattern: "[a-zA-Z0-9\\-\\_].png")
