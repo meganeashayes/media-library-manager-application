@@ -83,6 +83,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
     }
     
     
+   
+    
     /**** FUNCTION ASSOCIATED WITH THE MAIN WINDOW OBJECT ****/
     
     /// To open About page window when clicking about aboutPage tab main menu
@@ -92,6 +94,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         aboutWindow.window?.setIsVisible(true)
     }
     
+    
+//    @IBAction func openNewApp(_ sender: Any) {
+//        [Bundle.loadXibNamed:"SecondaryWindow", owner: self.window]
+//        
+//    }
     
     
     /// Zooms out the view of the current image on clicking + button

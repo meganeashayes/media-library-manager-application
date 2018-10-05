@@ -98,7 +98,7 @@
                         <items>
                             <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
                                 <connections>
-                                    <action selector="newMediaApp:" target="Voe-Tx-rLC" id="ocp-3J-CVL"/>
+                                    <action selector="openNewApp:" target="Voe-Tx-rLC" id="scy-2D-hsH"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
@@ -1094,13 +1094,13 @@
                     <constraint firstItem="hIY-Wj-PuE" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="97" id="O1J-fC-Vsq"/>
                     <constraint firstItem="4iA-VL-LYM" firstAttribute="trailing" secondItem="5n5-mO-huv" secondAttribute="trailing" id="OdH-aA-uPi"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="bottom" secondItem="Tp2-Pv-Dvg" secondAttribute="bottom" id="SZ7-1K-ULY"/>
+                    <constraint firstItem="SKY-4G-bmy" firstAttribute="leading" secondItem="klh-gl-Gjp" secondAttribute="trailing" constant="379" id="Sar-sQ-jnh"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="trailing" secondItem="D6J-kf-dS6" secondAttribute="trailing" id="URH-tm-qpw"/>
                     <constraint firstItem="klh-gl-Gjp" firstAttribute="top" secondItem="SKY-4G-bmy" secondAttribute="top" id="Ukx-3a-g0w"/>
                     <constraint firstItem="D6J-kf-dS6" firstAttribute="centerY" secondItem="SKY-4G-bmy" secondAttribute="centerY" id="WUN-P7-Utw"/>
                     <constraint firstItem="Tp2-Pv-Dvg" firstAttribute="top" secondItem="5n5-mO-huv" secondAttribute="top" id="YGl-2b-fnf"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="leading" secondItem="Tp2-Pv-Dvg" secondAttribute="leading" id="b7B-7S-BRG"/>
                     <constraint firstAttribute="trailing" secondItem="SKY-4G-bmy" secondAttribute="trailing" id="ckZ-xb-ydM"/>
-                    <constraint firstItem="SKY-4G-bmy" firstAttribute="leading" secondItem="D6J-kf-dS6" secondAttribute="trailing" constant="47" id="dBQ-ME-ojm"/>
                     <constraint firstItem="b7R-No-vDP" firstAttribute="top" secondItem="klh-gl-Gjp" secondAttribute="bottom" constant="10" id="ezU-At-D5e"/>
                     <constraint firstItem="ZF2-Fe-Sef" firstAttribute="leading" secondItem="D6J-kf-dS6" secondAttribute="leading" id="fOs-Vy-6c3"/>
                     <constraint firstItem="b7R-No-vDP" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="89" id="h22-3c-1ak"/>
@@ -1111,7 +1111,6 @@
                     <constraint firstItem="hIY-Wj-PuE" firstAttribute="leading" secondItem="klh-gl-Gjp" secondAttribute="trailing" constant="66" id="of5-F2-weA"/>
                     <constraint firstItem="4iA-VL-LYM" firstAttribute="bottom" secondItem="Tp2-Pv-Dvg" secondAttribute="bottom" id="rvl-mQ-dS6"/>
                     <constraint firstItem="5n5-mO-huv" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="228" id="wjY-cu-BWU"/>
-                    <constraint firstItem="SKY-4G-bmy" firstAttribute="leading" secondItem="Tp2-Pv-Dvg" secondAttribute="trailing" constant="47" id="yBC-Pt-RSM"/>
                 </constraints>
                 <contentFilters>
                     <ciFilter name="CIColorControls">
