@@ -51,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         // Insert code here to initialize your application
         self.window?.setTitleWithRepresentedFilename("Media Library App")
         
-        let bundlePath = Bundle.main.resourcePath
+        //let bundlePath = Bundle.main.resourcePath
         outletTextView.isHidden = true
         outletscroll.isHidden = true
         outletNotes.isHidden = true
@@ -62,19 +62,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSearchFieldDelegate {
         let importer = ImportFiles()
         importer.importMediaFiles(mediaFiles: mediaFiles)
         
-        if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
-            
-            do {
-                let contents = try String(contentsOfFile: filepath)
-                outletTextView.string = contents
-                outletTextView.isEditable = false
-                
-            } catch {
-                print("Contents could not be loaded")
-            }
-        } else {
-            print ("Filepath could not be found")
-        }
+//        if let filepath = Bundle.main.path(forResource: "readme", ofType: "txt"){
+//            
+//            do {
+//                let contents = try String(contentsOfFile: filepath)
+//                outletTextView.string = contents
+//                outletTextView.isEditable = false
+//                
+//            } catch {
+//                print("Contents could not be loaded")
+//            }
+//        } else {
+//            print ("Filepath could not be found")
+//        }
         
     }
     
